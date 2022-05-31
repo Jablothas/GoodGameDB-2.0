@@ -374,14 +374,14 @@
             // chkReplay
             // 
             this.chkReplay.AutoSize = true;
-            this.chkReplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chkReplay.BackColor = System.Drawing.Color.Transparent;
             this.chkReplay.ForeColor = System.Drawing.Color.Silver;
             this.chkReplay.Location = new System.Drawing.Point(214, 98);
             this.chkReplay.Name = "chkReplay";
-            this.chkReplay.Size = new System.Drawing.Size(66, 20);
+            this.chkReplay.Size = new System.Drawing.Size(69, 20);
             this.chkReplay.TabIndex = 49;
             this.chkReplay.Text = "Replay";
-            this.chkReplay.UseVisualStyleBackColor = true;
+            this.chkReplay.UseVisualStyleBackColor = false;
             this.chkReplay.CheckedChanged += new System.EventHandler(this.chkReplay_CheckedChanged);
             // 
             // label9
@@ -521,15 +521,15 @@
             // chkImpression
             // 
             this.chkImpression.AutoSize = true;
+            this.chkImpression.BackColor = System.Drawing.Color.Transparent;
             this.chkImpression.Checked = true;
             this.chkImpression.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkImpression.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkImpression.ForeColor = System.Drawing.Color.White;
+            this.chkImpression.ForeColor = System.Drawing.Color.Silver;
             this.chkImpression.Location = new System.Drawing.Point(36, 259);
             this.chkImpression.Name = "chkImpression";
-            this.chkImpression.Size = new System.Drawing.Size(12, 11);
+            this.chkImpression.Size = new System.Drawing.Size(15, 14);
             this.chkImpression.TabIndex = 49;
-            this.chkImpression.UseVisualStyleBackColor = true;
+            this.chkImpression.UseVisualStyleBackColor = false;
             // 
             // label16
             // 
@@ -571,15 +571,15 @@
             // chkBalance
             // 
             this.chkBalance.AutoSize = true;
+            this.chkBalance.BackColor = System.Drawing.Color.Transparent;
             this.chkBalance.Checked = true;
             this.chkBalance.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkBalance.ForeColor = System.Drawing.Color.White;
+            this.chkBalance.ForeColor = System.Drawing.Color.Silver;
             this.chkBalance.Location = new System.Drawing.Point(36, 233);
             this.chkBalance.Name = "chkBalance";
-            this.chkBalance.Size = new System.Drawing.Size(12, 11);
+            this.chkBalance.Size = new System.Drawing.Size(15, 14);
             this.chkBalance.TabIndex = 46;
-            this.chkBalance.UseVisualStyleBackColor = true;
+            this.chkBalance.UseVisualStyleBackColor = false;
             // 
             // label17
             // 
@@ -621,15 +621,15 @@
             // chkPacing
             // 
             this.chkPacing.AutoSize = true;
+            this.chkPacing.BackColor = System.Drawing.Color.Transparent;
             this.chkPacing.Checked = true;
             this.chkPacing.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkPacing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkPacing.ForeColor = System.Drawing.Color.White;
+            this.chkPacing.ForeColor = System.Drawing.Color.Silver;
             this.chkPacing.Location = new System.Drawing.Point(36, 207);
             this.chkPacing.Name = "chkPacing";
-            this.chkPacing.Size = new System.Drawing.Size(12, 11);
+            this.chkPacing.Size = new System.Drawing.Size(15, 14);
             this.chkPacing.TabIndex = 43;
-            this.chkPacing.UseVisualStyleBackColor = true;
+            this.chkPacing.UseVisualStyleBackColor = false;
             // 
             // label18
             // 
@@ -671,15 +671,15 @@
             // chkContent
             // 
             this.chkContent.AutoSize = true;
+            this.chkContent.BackColor = System.Drawing.Color.Transparent;
             this.chkContent.Checked = true;
             this.chkContent.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkContent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkContent.ForeColor = System.Drawing.Color.White;
+            this.chkContent.ForeColor = System.Drawing.Color.Silver;
             this.chkContent.Location = new System.Drawing.Point(35, 181);
             this.chkContent.Name = "chkContent";
-            this.chkContent.Size = new System.Drawing.Size(12, 11);
+            this.chkContent.Size = new System.Drawing.Size(15, 14);
             this.chkContent.TabIndex = 40;
-            this.chkContent.UseVisualStyleBackColor = true;
+            this.chkContent.UseVisualStyleBackColor = false;
             // 
             // label14
             // 
@@ -721,15 +721,15 @@
             // chkSound
             // 
             this.chkSound.AutoSize = true;
+            this.chkSound.BackColor = System.Drawing.Color.Transparent;
             this.chkSound.Checked = true;
             this.chkSound.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkSound.ForeColor = System.Drawing.Color.White;
+            this.chkSound.ForeColor = System.Drawing.Color.Silver;
             this.chkSound.Location = new System.Drawing.Point(35, 155);
             this.chkSound.Name = "chkSound";
-            this.chkSound.Size = new System.Drawing.Size(12, 11);
+            this.chkSound.Size = new System.Drawing.Size(15, 14);
             this.chkSound.TabIndex = 37;
-            this.chkSound.UseVisualStyleBackColor = true;
+            this.chkSound.UseVisualStyleBackColor = false;
             // 
             // label13
             // 
@@ -782,15 +782,15 @@
             // chkQuality
             // 
             this.chkQuality.AutoSize = true;
+            this.chkQuality.BackColor = System.Drawing.Color.Transparent;
             this.chkQuality.Checked = true;
             this.chkQuality.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkQuality.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkQuality.ForeColor = System.Drawing.Color.White;
+            this.chkQuality.ForeColor = System.Drawing.Color.Silver;
             this.chkQuality.Location = new System.Drawing.Point(35, 129);
             this.chkQuality.Name = "chkQuality";
-            this.chkQuality.Size = new System.Drawing.Size(12, 11);
+            this.chkQuality.Size = new System.Drawing.Size(15, 14);
             this.chkQuality.TabIndex = 34;
-            this.chkQuality.UseVisualStyleBackColor = true;
+            this.chkQuality.UseVisualStyleBackColor = false;
             // 
             // label11
             // 
@@ -832,15 +832,15 @@
             // chkNarrative
             // 
             this.chkNarrative.AutoSize = true;
+            this.chkNarrative.BackColor = System.Drawing.Color.Transparent;
             this.chkNarrative.Checked = true;
             this.chkNarrative.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkNarrative.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkNarrative.ForeColor = System.Drawing.Color.White;
+            this.chkNarrative.ForeColor = System.Drawing.Color.Silver;
             this.chkNarrative.Location = new System.Drawing.Point(35, 103);
             this.chkNarrative.Name = "chkNarrative";
-            this.chkNarrative.Size = new System.Drawing.Size(12, 11);
+            this.chkNarrative.Size = new System.Drawing.Size(15, 14);
             this.chkNarrative.TabIndex = 31;
-            this.chkNarrative.UseVisualStyleBackColor = true;
+            this.chkNarrative.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -882,15 +882,15 @@
             // chkPresentation
             // 
             this.chkPresentation.AutoSize = true;
+            this.chkPresentation.BackColor = System.Drawing.Color.Transparent;
             this.chkPresentation.Checked = true;
             this.chkPresentation.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkPresentation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkPresentation.ForeColor = System.Drawing.Color.White;
+            this.chkPresentation.ForeColor = System.Drawing.Color.Silver;
             this.chkPresentation.Location = new System.Drawing.Point(34, 77);
             this.chkPresentation.Name = "chkPresentation";
-            this.chkPresentation.Size = new System.Drawing.Size(12, 11);
+            this.chkPresentation.Size = new System.Drawing.Size(15, 14);
             this.chkPresentation.TabIndex = 28;
-            this.chkPresentation.UseVisualStyleBackColor = true;
+            this.chkPresentation.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -932,15 +932,15 @@
             // chkGameplay
             // 
             this.chkGameplay.AutoSize = true;
+            this.chkGameplay.BackColor = System.Drawing.Color.Transparent;
             this.chkGameplay.Checked = true;
             this.chkGameplay.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkGameplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chkGameplay.ForeColor = System.Drawing.Color.White;
+            this.chkGameplay.ForeColor = System.Drawing.Color.Silver;
             this.chkGameplay.Location = new System.Drawing.Point(34, 51);
             this.chkGameplay.Name = "chkGameplay";
-            this.chkGameplay.Size = new System.Drawing.Size(12, 11);
+            this.chkGameplay.Size = new System.Drawing.Size(15, 14);
             this.chkGameplay.TabIndex = 25;
-            this.chkGameplay.UseVisualStyleBackColor = true;
+            this.chkGameplay.UseVisualStyleBackColor = false;
             // 
             // label10
             // 
