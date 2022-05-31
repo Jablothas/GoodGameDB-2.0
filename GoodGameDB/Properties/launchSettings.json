@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GoodGameDB": {
+      "commandName": "Project",
+      "hotReloadEnabled": false
+    }
+  }
+}
