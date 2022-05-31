@@ -196,5 +196,45 @@ namespace GoodGameDB
         {
             Input_Location.BackColor = Color.White;
         }
+
+        private void Input_Day_Enter(object sender, EventArgs e)
+        {
+            Input_Day.BackColor = Color.FromArgb(118, 174, 200);
+        }
+
+        private void Input_Day_Leave(object sender, EventArgs e)
+        {
+            Input_Day.BackColor = Color.White;
+        }
+
+        private void Input_Month_Enter(object sender, EventArgs e)
+        {
+            Input_Month.BackColor = Color.FromArgb(118, 174, 200);
+        }
+
+        private void Input_Month_Leave(object sender, EventArgs e)
+        {
+            Input_Month.BackColor = Color.White;
+        }
+
+        private void Input_Year_Enter(object sender, EventArgs e)
+        {
+            Input_Year.BackColor = Color.FromArgb(118, 174, 200);
+        }
+
+        private void Input_Year_Leave(object sender, EventArgs e)
+        {
+            Input_Year.BackColor = Color.White;
+        }
+
+        private void Input_Note_Enter(object sender, EventArgs e)
+        {
+            Input_Note.BackColor = Color.FromArgb(118, 174, 200);
+        }
+
+        private void Input_Note_Leave(object sender, EventArgs e)
+        {
+            Input_Note.BackColor = Color.White;
+        }
     }
 }

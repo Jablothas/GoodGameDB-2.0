@@ -1081,6 +1081,8 @@
             this.Input_Note.Name = "Input_Note";
             this.Input_Note.Size = new System.Drawing.Size(229, 23);
             this.Input_Note.TabIndex = 6;
+            this.Input_Note.Enter += new System.EventHandler(this.Input_Note_Enter);
+            this.Input_Note.Leave += new System.EventHandler(this.Input_Note_Leave);
             // 
             // Input_Year
             // 
@@ -1089,6 +1091,8 @@
             this.Input_Year.Name = "Input_Year";
             this.Input_Year.Size = new System.Drawing.Size(91, 23);
             this.Input_Year.TabIndex = 5;
+            this.Input_Year.Enter += new System.EventHandler(this.Input_Year_Enter);
+            this.Input_Year.Leave += new System.EventHandler(this.Input_Year_Leave);
             // 
             // Input_Month
             // 
@@ -1097,6 +1101,8 @@
             this.Input_Month.Name = "Input_Month";
             this.Input_Month.Size = new System.Drawing.Size(63, 23);
             this.Input_Month.TabIndex = 4;
+            this.Input_Month.Enter += new System.EventHandler(this.Input_Month_Enter);
+            this.Input_Month.Leave += new System.EventHandler(this.Input_Month_Leave);
             // 
             // label5
             // 
@@ -1116,6 +1122,8 @@
             this.Input_Day.Name = "Input_Day";
             this.Input_Day.Size = new System.Drawing.Size(63, 23);
             this.Input_Day.TabIndex = 3;
+            this.Input_Day.Enter += new System.EventHandler(this.Input_Day_Enter);
+            this.Input_Day.Leave += new System.EventHandler(this.Input_Day_Leave);
             // 
             // label3
             // 
