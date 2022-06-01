@@ -91,6 +91,7 @@ namespace GoodGameDB
                             "'" + sTotal + "')");
 
                 ConnectDB.Close();
+                // wip query: INSERT INTO games (games.name, location, date, note, score, replay, score_values.name, gameplay, presentation, narrative, quality, sound, content, pacing, balance, impression, total)
                 SQLiteDataReader reader = ConnectDB.Reader("SELECT * FROM games INNER JOIN score_values ON games.score = score_values.s_id");
 
                 // Needs serious rework I think
