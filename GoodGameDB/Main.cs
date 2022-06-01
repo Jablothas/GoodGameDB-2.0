@@ -77,7 +77,7 @@ namespace GoodGameDB
             if (ReplayStatus == false)
             {
                 ConnectDB.Insert("INSERT INTO score_values (name, gameplay, presentation, narrative, quality, sound, content, pacing, balance, impression, total)" +
-                    "VALUES ('" + Input_Game + "'," +
+                    "VALUES ('" + Input_Game.Text + "'," +
                             "'" + sGameplay + "'," +
                             "'" + sPresentation + "'," +
                             "'" + sNarrative + "'," +
@@ -91,20 +91,27 @@ namespace GoodGameDB
                 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 // Need fix asap!
                 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                SQLiteDataReader reader = ConnectDB.Reader("SELECT * FROM score_values WHERE name = '" + Input_Game.Text + "'");
+                SQLiteDataReader reader = ConnectDB.Reader("SELECT * FROM score_values ORDER BY s_id ASC");
 
-                foreignKeyID = Convert.ToInt32(reader["s_id"]);
-                MessageBox.Show("" + foreignKeyID);             
+                while (reader.Read())
+                {
+                    if (reader["name"].ToString() == Input_Game.Text)
+                    {
+                        foreignKeyID = Convert.ToInt32(reader["s_id"]);
+                    }
+                }
 
-
+                MessageBox.Show("" + foreignKeyID);
                 ConnectDB.Insert("INSERT INTO games (name, date, location, note, score, replay)" +
                     "VALUES ('" + Input_Game.Text + "'," +
                             "'" + DateComplete + "'," +
                             "'" + Input_Location.Text + "'," +
                             "'" + Input_Note.Text + "'," +
                             "'" + foreignKeyID + "'," +
-                            "'" + "0" + 
+                            "'" + "0" +
                     "')"); ;
+
+                ConnectDB.Close();
             }
         }
 
