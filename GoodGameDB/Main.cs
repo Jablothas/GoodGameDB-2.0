@@ -42,9 +42,10 @@ namespace GoodGameDB
         int sTotal = 0;
 
         // Datafields for Input
-        bool ReplayStatus;
+        bool ReplayStatus = false;
         string DateComplete;
-        int foreignKeyID;
+        int foreignKeyID = 0;
+        string CurrentItemName; 
 
         public Main()
         {
@@ -88,20 +89,22 @@ namespace GoodGameDB
                             "'" + sBalance + "'," +
                             "'" + sImpression + "'," +
                             "'" + sTotal + "')");
-                // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                // Need fix asap!
-                // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                SQLiteDataReader reader = ConnectDB.Reader("SELECT * FROM score_values ORDER BY s_id ASC");
 
+                ConnectDB.Close();
+                SQLiteDataReader reader = ConnectDB.Reader("SELECT * FROM games INNER JOIN score_values ON games.score = score_values.s_id");
+
+                // Needs serious rework I think
                 while (reader.Read())
                 {
-                    if (reader["name"].ToString() == Input_Game.Text)
+                    if (Convert.ToString(reader["name"]) == Input_Game.Text)
                     {
-                        foreignKeyID = Convert.ToInt32(reader["s_id"]);
+                        foreignKeyID = Convert.ToInt32(reader["score_values.s_id"]);
+                        MessageBox.Show("" + foreignKeyID);
                     }
+
                 }
 
-                MessageBox.Show("" + foreignKeyID);
+                ConnectDB.Close();
                 ConnectDB.Insert("INSERT INTO games (name, date, location, note, score, replay)" +
                     "VALUES ('" + Input_Game.Text + "'," +
                             "'" + DateComplete + "'," +
