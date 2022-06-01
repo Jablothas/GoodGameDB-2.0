@@ -296,7 +296,7 @@
             this.Pnl_InfoData.BackColor = System.Drawing.Color.Transparent;
             this.Pnl_InfoData.Location = new System.Drawing.Point(2, 43);
             this.Pnl_InfoData.Name = "Pnl_InfoData";
-            this.Pnl_InfoData.Size = new System.Drawing.Size(346, 279);
+            this.Pnl_InfoData.Size = new System.Drawing.Size(343, 279);
             this.Pnl_InfoData.TabIndex = 1;
             // 
             // Pnl_InfoSplitter

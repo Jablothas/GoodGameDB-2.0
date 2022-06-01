@@ -51,7 +51,7 @@
             this.chkReplay = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnCommit = new System.Windows.Forms.Button();
             this.Pnl_Score = new System.Windows.Forms.Panel();
             this.Pnl_SumScore = new System.Windows.Forms.Panel();
             this.Lbl_SumScore = new System.Windows.Forms.Label();
@@ -340,7 +340,7 @@
             this.Pnl_SideContent.Controls.Add(this.chkReplay);
             this.Pnl_SideContent.Controls.Add(this.label9);
             this.Pnl_SideContent.Controls.Add(this.button4);
-            this.Pnl_SideContent.Controls.Add(this.button3);
+            this.Pnl_SideContent.Controls.Add(this.BtnCommit);
             this.Pnl_SideContent.Controls.Add(this.Pnl_Score);
             this.Pnl_SideContent.Controls.Add(this.label10);
             this.Pnl_SideContent.Controls.Add(this.pictureBox11);
@@ -404,14 +404,15 @@
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BtnCommit
             // 
-            this.button3.Location = new System.Drawing.Point(49, 608);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 31;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnCommit.Location = new System.Drawing.Point(49, 608);
+            this.BtnCommit.Name = "BtnCommit";
+            this.BtnCommit.Size = new System.Drawing.Size(75, 23);
+            this.BtnCommit.TabIndex = 31;
+            this.BtnCommit.Text = "Save";
+            this.BtnCommit.UseVisualStyleBackColor = true;
+            this.BtnCommit.Click += new System.EventHandler(this.BtnCommit_Click);
             // 
             // Pnl_Score
             // 
@@ -448,7 +449,7 @@
             this.Pnl_Score.Controls.Add(this.chkGameplay);
             this.Pnl_Score.Location = new System.Drawing.Point(13, 291);
             this.Pnl_Score.Name = "Pnl_Score";
-            this.Pnl_Score.Size = new System.Drawing.Size(323, 311);
+            this.Pnl_Score.Size = new System.Drawing.Size(280, 311);
             this.Pnl_Score.TabIndex = 30;
             // 
             // Pnl_SumScore
@@ -1302,7 +1303,7 @@
         private Label Lbl_SumScore;
         private Panel Pnl_SumScore;
         private Button button4;
-        private Button button3;
+        private Button BtnCommit;
         private Label label9;
         private CheckBox chkReplay;
     }

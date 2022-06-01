@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.IO;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace GoodGameDB
 {
@@ -38,9 +39,12 @@ namespace GoodGameDB
         int sPacing = 0;
         int sBalance = 0;
         int sImpression = 0;
+        int sTotal = 0;
 
         // Datafields for Input
         bool ReplayStatus;
+        string DateComplete;
+        int foreignKeyID;
 
         public Main()
         {
@@ -64,6 +68,44 @@ namespace GoodGameDB
             Pnl_Content.Tag = childForm;
             Pnl_Content.BringToFront();
             childForm.Show();
+        }
+
+        private void BtnCommit_Click(object sender, EventArgs e)
+        {
+            DateComplete = Input_Year.Text + "-" + Input_Month.Text + "-" + Input_Day.Text;
+
+            if (ReplayStatus == false)
+            {
+                ConnectDB.Insert("INSERT INTO score_values (name, gameplay, presentation, narrative, quality, sound, content, pacing, balance, impression, total)" +
+                    "VALUES ('" + Input_Game + "'," +
+                            "'" + sGameplay + "'," +
+                            "'" + sPresentation + "'," +
+                            "'" + sNarrative + "'," +
+                            "'" + sQuality + "'," +
+                            "'" + sSound + "'," +
+                            "'" + sContent + "'," +
+                            "'" + sPacing + "'," +
+                            "'" + sBalance + "'," +
+                            "'" + sImpression + "'," +
+                            "'" + sTotal + "')");
+                // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                // Need fix asap!
+                // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                SQLiteDataReader reader = ConnectDB.Reader("SELECT * FROM score_values WHERE name = '" + Input_Game.Text + "'");
+
+                foreignKeyID = Convert.ToInt32(reader["s_id"]);
+                MessageBox.Show("" + foreignKeyID);             
+
+
+                ConnectDB.Insert("INSERT INTO games (name, date, location, note, score, replay)" +
+                    "VALUES ('" + Input_Game.Text + "'," +
+                            "'" + DateComplete + "'," +
+                            "'" + Input_Location.Text + "'," +
+                            "'" + Input_Note.Text + "'," +
+                            "'" + foreignKeyID + "'," +
+                            "'" + "0" + 
+                    "')"); ;
+            }
         }
 
         private void Pnl_Title_MouseMove(object sender, MouseEventArgs e)
