@@ -121,6 +121,27 @@ namespace GoodGameDB
                     "')"); ;
                 ConnectDB.Close();
             }
+
+            if (ReplayStatus == true)
+            {
+                SQLiteDataReader reader = ConnectDB.Reader("SELECT * FROM score_values WHERE name = '" + Gametitle + "'");
+                reader.Read();
+
+                foreignKeyID = Convert.ToInt32(reader[0]);
+                MessageBox.Show("KeyID: " + foreignKeyID);
+                reader.Close();
+                ConnectDB.Close();
+
+                ConnectDB.Insert("INSERT INTO games (name, date, location, note, score, replay)" +
+                    "VALUES ('" + Input_Game.Text + "'," +
+                            "'" + DateComplete + "'," +
+                            "'" + Input_Location.Text + "'," +
+                            "'" + Input_Note.Text + "'," +
+                            "'" + foreignKeyID + "'," +
+                            "'" + "1" +
+                    "')"); ;
+                ConnectDB.Close();
+            }
         }
 
         private void Pnl_Title_MouseMove(object sender, MouseEventArgs e)
@@ -151,7 +172,7 @@ namespace GoodGameDB
             if (Pnl_SideContent.Visible == false)
             {
                 Pnl_SideContent.Visible = true;
-                Btn_Add.BackColor = Color.FromArgb(118, 174, 200);
+                Btn_Add.BackColor = Color.FromArgb(0, 171, 255);
             }
 
             else if (Pnl_SideContent.Visible == true)
@@ -227,16 +248,18 @@ namespace GoodGameDB
             if (chkReplay.Checked == true)
             {
                 ReplayStatus = true;
+                Pnl_HideScore.Visible = true;
             }
             if (chkReplay.Checked == false)
             {
                 ReplayStatus = false;
+                Pnl_HideScore.Visible = false;
             }
         }
 
         private void Input_Game_Enter(object sender, EventArgs e)
         {
-            Input_Game.BackColor = Color.FromArgb(118, 174, 200);
+            Input_Game.BackColor = Color.FromArgb(0, 171, 255);
         }
 
         private void Input_Game_Leave(object sender, EventArgs e)
@@ -246,7 +269,7 @@ namespace GoodGameDB
 
         private void Input_Location_Enter(object sender, EventArgs e)
         {
-            Input_Location.BackColor = Color.FromArgb(118, 174, 200);
+            Input_Location.BackColor = Color.FromArgb(0, 171, 255);
         }
 
         private void Input_Location_Leave(object sender, EventArgs e)
@@ -256,7 +279,7 @@ namespace GoodGameDB
 
         private void Input_Day_Enter(object sender, EventArgs e)
         {
-            Input_Day.BackColor = Color.FromArgb(118, 174, 200);
+            Input_Day.BackColor = Color.FromArgb(0, 171, 255);
         }
 
         private void Input_Day_Leave(object sender, EventArgs e)
@@ -266,7 +289,7 @@ namespace GoodGameDB
 
         private void Input_Month_Enter(object sender, EventArgs e)
         {
-            Input_Month.BackColor = Color.FromArgb(118, 174, 200);
+            Input_Month.BackColor = Color.FromArgb(0, 171, 255);
         }
 
         private void Input_Month_Leave(object sender, EventArgs e)
@@ -276,7 +299,7 @@ namespace GoodGameDB
 
         private void Input_Year_Enter(object sender, EventArgs e)
         {
-            Input_Year.BackColor = Color.FromArgb(118, 174, 200);
+            Input_Year.BackColor = Color.FromArgb(0, 171, 255);
         }
 
         private void Input_Year_Leave(object sender, EventArgs e)
@@ -286,12 +309,102 @@ namespace GoodGameDB
 
         private void Input_Note_Enter(object sender, EventArgs e)
         {
-            Input_Note.BackColor = Color.FromArgb(118, 174, 200);
+            Input_Note.BackColor = Color.FromArgb(0, 171, 255);
         }
 
         private void Input_Note_Leave(object sender, EventArgs e)
         {
             Input_Note.BackColor = Color.White;
+        }
+
+        private void Rate_Gameplay_Enter(object sender, EventArgs e)
+        {
+            Rate_Gameplay.BackColor = Color.FromArgb(0, 171, 255);
+        }
+
+        private void Rate_Gameplay_Leave(object sender, EventArgs e)
+        {
+            Rate_Gameplay.BackColor = Color.FromArgb(20, 20, 20);
+        }
+
+        private void Rate_Presentation_Enter(object sender, EventArgs e)
+        {
+            Rate_Presentation.BackColor = Color.FromArgb(0, 171, 255);
+        }
+
+        private void Rate_Presentation_Leave(object sender, EventArgs e)
+        {
+            Rate_Presentation.BackColor = Color.FromArgb(20, 20, 20);
+        }
+
+        private void Rate_Narrative_Enter(object sender, EventArgs e)
+        {
+            Rate_Narrative.BackColor = Color.FromArgb(0, 171, 255);
+        }
+
+        private void Rate_Narrative_Leave(object sender, EventArgs e)
+        {
+            Rate_Narrative.BackColor = Color.FromArgb(20, 20, 20);
+        }
+
+        private void Rate_Quality_Enter(object sender, EventArgs e)
+        {
+            Rate_Quality.BackColor = Color.FromArgb(0, 171, 255);
+        }
+
+        private void Rate_Quality_Leave(object sender, EventArgs e)
+        {
+            Rate_Quality.BackColor = Color.FromArgb(20, 20, 20);
+        }
+
+        private void Rate_Sound_Enter(object sender, EventArgs e)
+        {
+            Rate_Sound.BackColor = Color.FromArgb(0, 171, 255);
+        }
+
+        private void Rate_Sound_Leave(object sender, EventArgs e)
+        {
+            Rate_Sound.BackColor = Color.FromArgb(20, 20, 20);
+        }
+
+        private void Rate_Content_Enter(object sender, EventArgs e)
+        {
+            Rate_Content.BackColor = Color.FromArgb(0, 171, 255);
+        }
+
+        private void Rate_Content_Leave(object sender, EventArgs e)
+        {
+            Rate_Content.BackColor = Color.FromArgb(20, 20, 20);
+        }
+
+        private void Rate_Pacing_Enter(object sender, EventArgs e)
+        {
+            Rate_Pacing.BackColor = Color.FromArgb(0, 171, 255);
+        }
+
+        private void Rate_Pacing_Leave(object sender, EventArgs e)
+        {
+            Rate_Pacing.BackColor = Color.FromArgb(20, 20, 20);
+        }
+
+        private void Rate_Balance_Enter(object sender, EventArgs e)
+        {
+            Rate_Balance.BackColor = Color.FromArgb(0, 171, 255);
+        }
+
+        private void Rate_Balance_Leave(object sender, EventArgs e)
+        {
+            Rate_Balance.BackColor = Color.FromArgb(20, 20, 20);
+        }
+
+        private void Rate_Impression_Enter(object sender, EventArgs e)
+        {
+            Rate_Impression.BackColor = Color.FromArgb(0, 171, 255);
+        }
+
+        private void Rate_Impression_Leave(object sender, EventArgs e)
+        {
+            Rate_Impression.BackColor = Color.FromArgb(20, 20, 20);
         }
     }
 }

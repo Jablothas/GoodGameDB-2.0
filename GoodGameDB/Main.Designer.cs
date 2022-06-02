@@ -48,11 +48,28 @@
             this.Btn_Stats = new System.Windows.Forms.Button();
             this.Btn_Add = new System.Windows.Forms.Button();
             this.Pnl_SideContent = new System.Windows.Forms.Panel();
-            this.chkReplay = new System.Windows.Forms.CheckBox();
+            this.Pnl_HideScore = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.chkReplay = new System.Windows.Forms.CheckBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.BtnCommit = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Input_Note = new System.Windows.Forms.TextBox();
+            this.Input_Year = new System.Windows.Forms.TextBox();
+            this.Input_Month = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Input_Day = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Input_Location = new System.Windows.Forms.TextBox();
+            this.Input_Game = new System.Windows.Forms.TextBox();
+            this.Pnl_NavSplitter = new System.Windows.Forms.Panel();
+            this.Pnl_GameInfo = new System.Windows.Forms.Panel();
+            this.Pnl_GameInfoBackgroundSplitter = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.Pnl_Score = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.Pnl_SumScore = new System.Windows.Forms.Panel();
             this.Lbl_SumScore = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -71,7 +88,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.Rate_Sound = new System.Windows.Forms.NumericUpDown();
             this.chkSound = new System.Windows.Forms.CheckBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.Rate_Quality = new System.Windows.Forms.NumericUpDown();
             this.chkQuality = new System.Windows.Forms.CheckBox();
@@ -84,28 +100,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.Rate_Gameplay = new System.Windows.Forms.NumericUpDown();
             this.chkGameplay = new System.Windows.Forms.CheckBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Input_Note = new System.Windows.Forms.TextBox();
-            this.Input_Year = new System.Windows.Forms.TextBox();
-            this.Input_Month = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Input_Day = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Input_Location = new System.Windows.Forms.TextBox();
-            this.Input_Game = new System.Windows.Forms.TextBox();
-            this.Pnl_NavSplitter = new System.Windows.Forms.Panel();
             this.Pnl_Content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_MiniWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_WindowClose)).BeginInit();
@@ -115,6 +109,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.Pnl_SideContent.SuspendLayout();
+            this.Pnl_HideScore.SuspendLayout();
+            this.Pnl_GameInfo.SuspendLayout();
             this.Pnl_Score.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Impression)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Balance)).BeginInit();
@@ -125,16 +121,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Narrative)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Presentation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Gameplay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -337,46 +323,57 @@
             // Pnl_SideContent
             // 
             this.Pnl_SideContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.Pnl_SideContent.Controls.Add(this.Pnl_HideScore);
             this.Pnl_SideContent.Controls.Add(this.chkReplay);
-            this.Pnl_SideContent.Controls.Add(this.label9);
             this.Pnl_SideContent.Controls.Add(this.button4);
-            this.Pnl_SideContent.Controls.Add(this.BtnCommit);
-            this.Pnl_SideContent.Controls.Add(this.Pnl_Score);
             this.Pnl_SideContent.Controls.Add(this.label10);
-            this.Pnl_SideContent.Controls.Add(this.pictureBox11);
-            this.Pnl_SideContent.Controls.Add(this.pictureBox10);
-            this.Pnl_SideContent.Controls.Add(this.pictureBox9);
-            this.Pnl_SideContent.Controls.Add(this.pictureBox8);
-            this.Pnl_SideContent.Controls.Add(this.pictureBox7);
-            this.Pnl_SideContent.Controls.Add(this.pictureBox6);
-            this.Pnl_SideContent.Controls.Add(this.pictureBox5);
-            this.Pnl_SideContent.Controls.Add(this.pictureBox4);
-            this.Pnl_SideContent.Controls.Add(this.pictureBox3);
-            this.Pnl_SideContent.Controls.Add(this.pictureBox2);
+            this.Pnl_SideContent.Controls.Add(this.BtnCommit);
             this.Pnl_SideContent.Controls.Add(this.label6);
             this.Pnl_SideContent.Controls.Add(this.Input_Note);
             this.Pnl_SideContent.Controls.Add(this.Input_Year);
             this.Pnl_SideContent.Controls.Add(this.Input_Month);
+            this.Pnl_SideContent.Controls.Add(this.label13);
             this.Pnl_SideContent.Controls.Add(this.label5);
             this.Pnl_SideContent.Controls.Add(this.Input_Day);
             this.Pnl_SideContent.Controls.Add(this.label3);
-            this.Pnl_SideContent.Controls.Add(this.label4);
             this.Pnl_SideContent.Controls.Add(this.Input_Location);
             this.Pnl_SideContent.Controls.Add(this.Input_Game);
             this.Pnl_SideContent.Controls.Add(this.Pnl_NavSplitter);
+            this.Pnl_SideContent.Controls.Add(this.Pnl_GameInfo);
+            this.Pnl_SideContent.Controls.Add(this.Pnl_Score);
             this.Pnl_SideContent.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_SideContent.Location = new System.Drawing.Point(45, 30);
             this.Pnl_SideContent.Name = "Pnl_SideContent";
-            this.Pnl_SideContent.Size = new System.Drawing.Size(353, 875);
+            this.Pnl_SideContent.Size = new System.Drawing.Size(280, 875);
             this.Pnl_SideContent.TabIndex = 6;
             this.Pnl_SideContent.Visible = false;
+            // 
+            // Pnl_HideScore
+            // 
+            this.Pnl_HideScore.Controls.Add(this.label9);
+            this.Pnl_HideScore.Location = new System.Drawing.Point(5, 346);
+            this.Pnl_HideScore.Name = "Pnl_HideScore";
+            this.Pnl_HideScore.Size = new System.Drawing.Size(275, 277);
+            this.Pnl_HideScore.TabIndex = 3;
+            this.Pnl_HideScore.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(20, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(16, 16);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "/";
             // 
             // chkReplay
             // 
             this.chkReplay.AutoSize = true;
             this.chkReplay.BackColor = System.Drawing.Color.Transparent;
             this.chkReplay.ForeColor = System.Drawing.Color.Silver;
-            this.chkReplay.Location = new System.Drawing.Point(214, 98);
+            this.chkReplay.Location = new System.Drawing.Point(190, 98);
             this.chkReplay.Name = "chkReplay";
             this.chkReplay.Size = new System.Drawing.Size(69, 20);
             this.chkReplay.TabIndex = 49;
@@ -384,38 +381,192 @@
             this.chkReplay.UseVisualStyleBackColor = false;
             this.chkReplay.CheckedChanged += new System.EventHandler(this.chkReplay_CheckedChanged);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(22, 672);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(229, 32);
-            this.label9.TabIndex = 48;
-            this.label9.Text = "todo: When Game already exisit: \r\nCheck and load score\r\n";
-            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(130, 608);
+            this.button4.BackColor = System.Drawing.Color.DarkGray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(103, 829);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(75, 25);
             this.button4.TabIndex = 32;
             this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.label10.Location = new System.Drawing.Point(25, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(176, 16);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Playthrough Basic Data";
             // 
             // BtnCommit
             // 
-            this.BtnCommit.Location = new System.Drawing.Point(49, 608);
+            this.BtnCommit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.BtnCommit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCommit.Location = new System.Drawing.Point(22, 829);
             this.BtnCommit.Name = "BtnCommit";
-            this.BtnCommit.Size = new System.Drawing.Size(75, 23);
+            this.BtnCommit.Size = new System.Drawing.Size(75, 25);
             this.BtnCommit.TabIndex = 31;
             this.BtnCommit.Text = "Save";
-            this.BtnCommit.UseVisualStyleBackColor = true;
+            this.BtnCommit.UseVisualStyleBackColor = false;
             this.BtnCommit.Click += new System.EventHandler(this.BtnCommit_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(25, 232);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 16);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Note";
+            // 
+            // Input_Note
+            // 
+            this.Input_Note.BackColor = System.Drawing.Color.White;
+            this.Input_Note.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Input_Note.Location = new System.Drawing.Point(25, 253);
+            this.Input_Note.Name = "Input_Note";
+            this.Input_Note.Size = new System.Drawing.Size(229, 23);
+            this.Input_Note.TabIndex = 6;
+            this.Input_Note.Enter += new System.EventHandler(this.Input_Note_Enter);
+            this.Input_Note.Leave += new System.EventHandler(this.Input_Note_Leave);
+            // 
+            // Input_Year
+            // 
+            this.Input_Year.BackColor = System.Drawing.Color.White;
+            this.Input_Year.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Input_Year.Location = new System.Drawing.Point(163, 194);
+            this.Input_Year.Name = "Input_Year";
+            this.Input_Year.Size = new System.Drawing.Size(91, 23);
+            this.Input_Year.TabIndex = 5;
+            this.Input_Year.Enter += new System.EventHandler(this.Input_Year_Enter);
+            this.Input_Year.Leave += new System.EventHandler(this.Input_Year_Leave);
+            // 
+            // Input_Month
+            // 
+            this.Input_Month.BackColor = System.Drawing.Color.White;
+            this.Input_Month.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Input_Month.Location = new System.Drawing.Point(94, 194);
+            this.Input_Month.Name = "Input_Month";
+            this.Input_Month.Size = new System.Drawing.Size(63, 23);
+            this.Input_Month.TabIndex = 4;
+            this.Input_Month.Enter += new System.EventHandler(this.Input_Month_Enter);
+            this.Input_Month.Leave += new System.EventHandler(this.Input_Month_Leave);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.label13.Location = new System.Drawing.Point(25, 314);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(153, 16);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Playthrough Scoring";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(25, 173);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Date";
+            // 
+            // Input_Day
+            // 
+            this.Input_Day.BackColor = System.Drawing.Color.White;
+            this.Input_Day.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Input_Day.Location = new System.Drawing.Point(25, 194);
+            this.Input_Day.Name = "Input_Day";
+            this.Input_Day.Size = new System.Drawing.Size(63, 23);
+            this.Input_Day.TabIndex = 3;
+            this.Input_Day.Enter += new System.EventHandler(this.Input_Day_Enter);
+            this.Input_Day.Leave += new System.EventHandler(this.Input_Day_Leave);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(25, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 16);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Game";
+            // 
+            // Input_Location
+            // 
+            this.Input_Location.BackColor = System.Drawing.Color.White;
+            this.Input_Location.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Input_Location.Location = new System.Drawing.Point(25, 132);
+            this.Input_Location.Name = "Input_Location";
+            this.Input_Location.Size = new System.Drawing.Size(229, 23);
+            this.Input_Location.TabIndex = 2;
+            this.Input_Location.Enter += new System.EventHandler(this.Input_Location_Enter);
+            this.Input_Location.Leave += new System.EventHandler(this.Input_Location_Leave);
+            // 
+            // Input_Game
+            // 
+            this.Input_Game.BackColor = System.Drawing.Color.White;
+            this.Input_Game.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Input_Game.Location = new System.Drawing.Point(25, 69);
+            this.Input_Game.Name = "Input_Game";
+            this.Input_Game.Size = new System.Drawing.Size(229, 23);
+            this.Input_Game.TabIndex = 1;
+            this.Input_Game.Enter += new System.EventHandler(this.Input_Game_Enter);
+            this.Input_Game.Leave += new System.EventHandler(this.Input_Game_Leave);
+            // 
+            // Pnl_NavSplitter
+            // 
+            this.Pnl_NavSplitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.Pnl_NavSplitter.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Pnl_NavSplitter.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_NavSplitter.Name = "Pnl_NavSplitter";
+            this.Pnl_NavSplitter.Size = new System.Drawing.Size(5, 875);
+            this.Pnl_NavSplitter.TabIndex = 0;
+            // 
+            // Pnl_GameInfo
+            // 
+            this.Pnl_GameInfo.BackColor = System.Drawing.Color.Transparent;
+            this.Pnl_GameInfo.Controls.Add(this.Pnl_GameInfoBackgroundSplitter);
+            this.Pnl_GameInfo.Controls.Add(this.label4);
+            this.Pnl_GameInfo.Location = new System.Drawing.Point(2, 37);
+            this.Pnl_GameInfo.Name = "Pnl_GameInfo";
+            this.Pnl_GameInfo.Size = new System.Drawing.Size(350, 248);
+            this.Pnl_GameInfo.TabIndex = 3;
+            // 
+            // Pnl_GameInfoBackgroundSplitter
+            // 
+            this.Pnl_GameInfoBackgroundSplitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.Pnl_GameInfoBackgroundSplitter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_GameInfoBackgroundSplitter.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_GameInfoBackgroundSplitter.Name = "Pnl_GameInfoBackgroundSplitter";
+            this.Pnl_GameInfoBackgroundSplitter.Size = new System.Drawing.Size(350, 2);
+            this.Pnl_GameInfoBackgroundSplitter.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(23, 75);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 16);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Location";
             // 
             // Pnl_Score
             // 
+            this.Pnl_Score.Controls.Add(this.panel3);
             this.Pnl_Score.Controls.Add(this.Pnl_SumScore);
             this.Pnl_Score.Controls.Add(this.Lbl_SumScore);
             this.Pnl_Score.Controls.Add(this.label19);
@@ -434,7 +585,6 @@
             this.Pnl_Score.Controls.Add(this.label14);
             this.Pnl_Score.Controls.Add(this.Rate_Sound);
             this.Pnl_Score.Controls.Add(this.chkSound);
-            this.Pnl_Score.Controls.Add(this.label13);
             this.Pnl_Score.Controls.Add(this.label12);
             this.Pnl_Score.Controls.Add(this.Rate_Quality);
             this.Pnl_Score.Controls.Add(this.chkQuality);
@@ -447,15 +597,24 @@
             this.Pnl_Score.Controls.Add(this.label8);
             this.Pnl_Score.Controls.Add(this.Rate_Gameplay);
             this.Pnl_Score.Controls.Add(this.chkGameplay);
-            this.Pnl_Score.Location = new System.Drawing.Point(13, 291);
+            this.Pnl_Score.Location = new System.Drawing.Point(5, 343);
             this.Pnl_Score.Name = "Pnl_Score";
-            this.Pnl_Score.Size = new System.Drawing.Size(280, 311);
+            this.Pnl_Score.Size = new System.Drawing.Size(347, 276);
             this.Pnl_Score.TabIndex = 30;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(347, 2);
+            this.panel3.TabIndex = 53;
             // 
             // Pnl_SumScore
             // 
             this.Pnl_SumScore.BackColor = System.Drawing.Color.Silver;
-            this.Pnl_SumScore.Location = new System.Drawing.Point(40, 279);
+            this.Pnl_SumScore.Location = new System.Drawing.Point(29, 247);
             this.Pnl_SumScore.Name = "Pnl_SumScore";
             this.Pnl_SumScore.Size = new System.Drawing.Size(227, 1);
             this.Pnl_SumScore.TabIndex = 52;
@@ -464,19 +623,19 @@
             // 
             this.Lbl_SumScore.AutoSize = true;
             this.Lbl_SumScore.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lbl_SumScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(174)))), ((int)(((byte)(200)))));
-            this.Lbl_SumScore.Location = new System.Drawing.Point(221, 288);
+            this.Lbl_SumScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.Lbl_SumScore.Location = new System.Drawing.Point(203, 253);
             this.Lbl_SumScore.Name = "Lbl_SumScore";
-            this.Lbl_SumScore.Size = new System.Drawing.Size(16, 16);
+            this.Lbl_SumScore.Size = new System.Drawing.Size(25, 16);
             this.Lbl_SumScore.TabIndex = 51;
-            this.Lbl_SumScore.Text = "0";
+            this.Lbl_SumScore.Text = "19";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(174)))), ((int)(((byte)(200)))));
-            this.label19.Location = new System.Drawing.Point(12, 288);
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.label19.Location = new System.Drawing.Point(46, 253);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(80, 16);
             this.label19.TabIndex = 50;
@@ -487,7 +646,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(57, 257);
+            this.label15.Location = new System.Drawing.Point(46, 225);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(77, 16);
             this.label15.TabIndex = 47;
@@ -498,7 +657,7 @@
             this.Rate_Impression.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Rate_Impression.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Rate_Impression.ForeColor = System.Drawing.Color.White;
-            this.Rate_Impression.Location = new System.Drawing.Point(224, 256);
+            this.Rate_Impression.Location = new System.Drawing.Point(213, 224);
             this.Rate_Impression.Maximum = new decimal(new int[] {
             10,
             0,
@@ -511,13 +670,15 @@
             0});
             this.Rate_Impression.Name = "Rate_Impression";
             this.Rate_Impression.Size = new System.Drawing.Size(41, 19);
-            this.Rate_Impression.TabIndex = 48;
+            this.Rate_Impression.TabIndex = 15;
             this.Rate_Impression.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.Rate_Impression.ValueChanged += new System.EventHandler(this.Rate_Impression_ValueChanged);
+            this.Rate_Impression.Enter += new System.EventHandler(this.Rate_Impression_Enter);
+            this.Rate_Impression.Leave += new System.EventHandler(this.Rate_Impression_Leave);
             // 
             // chkImpression
             // 
@@ -526,7 +687,7 @@
             this.chkImpression.Checked = true;
             this.chkImpression.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkImpression.ForeColor = System.Drawing.Color.Silver;
-            this.chkImpression.Location = new System.Drawing.Point(36, 259);
+            this.chkImpression.Location = new System.Drawing.Point(25, 227);
             this.chkImpression.Name = "chkImpression";
             this.chkImpression.Size = new System.Drawing.Size(15, 14);
             this.chkImpression.TabIndex = 49;
@@ -537,7 +698,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(57, 231);
+            this.label16.Location = new System.Drawing.Point(46, 199);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(58, 16);
             this.label16.TabIndex = 44;
@@ -548,7 +709,7 @@
             this.Rate_Balance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Rate_Balance.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Rate_Balance.ForeColor = System.Drawing.Color.White;
-            this.Rate_Balance.Location = new System.Drawing.Point(224, 230);
+            this.Rate_Balance.Location = new System.Drawing.Point(213, 198);
             this.Rate_Balance.Maximum = new decimal(new int[] {
             10,
             0,
@@ -561,13 +722,15 @@
             0});
             this.Rate_Balance.Name = "Rate_Balance";
             this.Rate_Balance.Size = new System.Drawing.Size(41, 19);
-            this.Rate_Balance.TabIndex = 45;
+            this.Rate_Balance.TabIndex = 14;
             this.Rate_Balance.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.Rate_Balance.ValueChanged += new System.EventHandler(this.Rate_Balance_ValueChanged);
+            this.Rate_Balance.Enter += new System.EventHandler(this.Rate_Balance_Enter);
+            this.Rate_Balance.Leave += new System.EventHandler(this.Rate_Balance_Leave);
             // 
             // chkBalance
             // 
@@ -576,7 +739,7 @@
             this.chkBalance.Checked = true;
             this.chkBalance.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkBalance.ForeColor = System.Drawing.Color.Silver;
-            this.chkBalance.Location = new System.Drawing.Point(36, 233);
+            this.chkBalance.Location = new System.Drawing.Point(25, 201);
             this.chkBalance.Name = "chkBalance";
             this.chkBalance.Size = new System.Drawing.Size(15, 14);
             this.chkBalance.TabIndex = 46;
@@ -587,7 +750,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(57, 205);
+            this.label17.Location = new System.Drawing.Point(46, 173);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(50, 16);
             this.label17.TabIndex = 41;
@@ -598,7 +761,7 @@
             this.Rate_Pacing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Rate_Pacing.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Rate_Pacing.ForeColor = System.Drawing.Color.White;
-            this.Rate_Pacing.Location = new System.Drawing.Point(224, 204);
+            this.Rate_Pacing.Location = new System.Drawing.Point(213, 172);
             this.Rate_Pacing.Maximum = new decimal(new int[] {
             10,
             0,
@@ -611,13 +774,15 @@
             0});
             this.Rate_Pacing.Name = "Rate_Pacing";
             this.Rate_Pacing.Size = new System.Drawing.Size(41, 19);
-            this.Rate_Pacing.TabIndex = 42;
+            this.Rate_Pacing.TabIndex = 13;
             this.Rate_Pacing.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.Rate_Pacing.ValueChanged += new System.EventHandler(this.Rate_Pacing_ValueChanged);
+            this.Rate_Pacing.Enter += new System.EventHandler(this.Rate_Pacing_Enter);
+            this.Rate_Pacing.Leave += new System.EventHandler(this.Rate_Pacing_Leave);
             // 
             // chkPacing
             // 
@@ -626,7 +791,7 @@
             this.chkPacing.Checked = true;
             this.chkPacing.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkPacing.ForeColor = System.Drawing.Color.Silver;
-            this.chkPacing.Location = new System.Drawing.Point(36, 207);
+            this.chkPacing.Location = new System.Drawing.Point(25, 175);
             this.chkPacing.Name = "chkPacing";
             this.chkPacing.Size = new System.Drawing.Size(15, 14);
             this.chkPacing.TabIndex = 43;
@@ -637,7 +802,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(56, 179);
+            this.label18.Location = new System.Drawing.Point(45, 147);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(60, 16);
             this.label18.TabIndex = 38;
@@ -648,7 +813,7 @@
             this.Rate_Content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Rate_Content.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Rate_Content.ForeColor = System.Drawing.Color.White;
-            this.Rate_Content.Location = new System.Drawing.Point(223, 178);
+            this.Rate_Content.Location = new System.Drawing.Point(212, 146);
             this.Rate_Content.Maximum = new decimal(new int[] {
             10,
             0,
@@ -661,13 +826,15 @@
             0});
             this.Rate_Content.Name = "Rate_Content";
             this.Rate_Content.Size = new System.Drawing.Size(41, 19);
-            this.Rate_Content.TabIndex = 39;
+            this.Rate_Content.TabIndex = 12;
             this.Rate_Content.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.Rate_Content.ValueChanged += new System.EventHandler(this.Rate_Content_ValueChanged);
+            this.Rate_Content.Enter += new System.EventHandler(this.Rate_Content_Enter);
+            this.Rate_Content.Leave += new System.EventHandler(this.Rate_Content_Leave);
             // 
             // chkContent
             // 
@@ -676,7 +843,7 @@
             this.chkContent.Checked = true;
             this.chkContent.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkContent.ForeColor = System.Drawing.Color.Silver;
-            this.chkContent.Location = new System.Drawing.Point(35, 181);
+            this.chkContent.Location = new System.Drawing.Point(24, 149);
             this.chkContent.Name = "chkContent";
             this.chkContent.Size = new System.Drawing.Size(15, 14);
             this.chkContent.TabIndex = 40;
@@ -687,7 +854,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(56, 153);
+            this.label14.Location = new System.Drawing.Point(45, 121);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(48, 16);
             this.label14.TabIndex = 35;
@@ -698,7 +865,7 @@
             this.Rate_Sound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Rate_Sound.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Rate_Sound.ForeColor = System.Drawing.Color.White;
-            this.Rate_Sound.Location = new System.Drawing.Point(223, 152);
+            this.Rate_Sound.Location = new System.Drawing.Point(212, 120);
             this.Rate_Sound.Maximum = new decimal(new int[] {
             10,
             0,
@@ -711,13 +878,15 @@
             0});
             this.Rate_Sound.Name = "Rate_Sound";
             this.Rate_Sound.Size = new System.Drawing.Size(41, 19);
-            this.Rate_Sound.TabIndex = 36;
+            this.Rate_Sound.TabIndex = 11;
             this.Rate_Sound.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.Rate_Sound.ValueChanged += new System.EventHandler(this.Rate_Sound_ValueChanged);
+            this.Rate_Sound.Enter += new System.EventHandler(this.Rate_Sound_Enter);
+            this.Rate_Sound.Leave += new System.EventHandler(this.Rate_Sound_Leave);
             // 
             // chkSound
             // 
@@ -726,29 +895,18 @@
             this.chkSound.Checked = true;
             this.chkSound.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkSound.ForeColor = System.Drawing.Color.Silver;
-            this.chkSound.Location = new System.Drawing.Point(35, 155);
+            this.chkSound.Location = new System.Drawing.Point(24, 123);
             this.chkSound.Name = "chkSound";
             this.chkSound.Size = new System.Drawing.Size(15, 14);
             this.chkSound.TabIndex = 37;
             this.chkSound.UseVisualStyleBackColor = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(174)))), ((int)(((byte)(200)))));
-            this.label13.Location = new System.Drawing.Point(12, 13);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(99, 16);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "Game Rating";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(56, 127);
+            this.label12.Location = new System.Drawing.Point(45, 95);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 16);
             this.label12.TabIndex = 32;
@@ -759,7 +917,7 @@
             this.Rate_Quality.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Rate_Quality.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Rate_Quality.ForeColor = System.Drawing.Color.White;
-            this.Rate_Quality.Location = new System.Drawing.Point(223, 126);
+            this.Rate_Quality.Location = new System.Drawing.Point(212, 94);
             this.Rate_Quality.Maximum = new decimal(new int[] {
             10,
             0,
@@ -772,13 +930,15 @@
             0});
             this.Rate_Quality.Name = "Rate_Quality";
             this.Rate_Quality.Size = new System.Drawing.Size(41, 19);
-            this.Rate_Quality.TabIndex = 33;
+            this.Rate_Quality.TabIndex = 10;
             this.Rate_Quality.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.Rate_Quality.ValueChanged += new System.EventHandler(this.Rate_Quality_ValueChanged);
+            this.Rate_Quality.Enter += new System.EventHandler(this.Rate_Quality_Enter);
+            this.Rate_Quality.Leave += new System.EventHandler(this.Rate_Quality_Leave);
             // 
             // chkQuality
             // 
@@ -787,7 +947,7 @@
             this.chkQuality.Checked = true;
             this.chkQuality.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkQuality.ForeColor = System.Drawing.Color.Silver;
-            this.chkQuality.Location = new System.Drawing.Point(35, 129);
+            this.chkQuality.Location = new System.Drawing.Point(24, 97);
             this.chkQuality.Name = "chkQuality";
             this.chkQuality.Size = new System.Drawing.Size(15, 14);
             this.chkQuality.TabIndex = 34;
@@ -798,7 +958,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(56, 101);
+            this.label11.Location = new System.Drawing.Point(45, 69);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(67, 16);
             this.label11.TabIndex = 29;
@@ -809,7 +969,7 @@
             this.Rate_Narrative.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Rate_Narrative.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Rate_Narrative.ForeColor = System.Drawing.Color.White;
-            this.Rate_Narrative.Location = new System.Drawing.Point(223, 100);
+            this.Rate_Narrative.Location = new System.Drawing.Point(212, 68);
             this.Rate_Narrative.Maximum = new decimal(new int[] {
             10,
             0,
@@ -822,13 +982,15 @@
             0});
             this.Rate_Narrative.Name = "Rate_Narrative";
             this.Rate_Narrative.Size = new System.Drawing.Size(41, 19);
-            this.Rate_Narrative.TabIndex = 30;
+            this.Rate_Narrative.TabIndex = 9;
             this.Rate_Narrative.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.Rate_Narrative.ValueChanged += new System.EventHandler(this.Rate_Narrative_ValueChanged);
+            this.Rate_Narrative.Enter += new System.EventHandler(this.Rate_Narrative_Enter);
+            this.Rate_Narrative.Leave += new System.EventHandler(this.Rate_Narrative_Leave);
             // 
             // chkNarrative
             // 
@@ -837,7 +999,7 @@
             this.chkNarrative.Checked = true;
             this.chkNarrative.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkNarrative.ForeColor = System.Drawing.Color.Silver;
-            this.chkNarrative.Location = new System.Drawing.Point(35, 103);
+            this.chkNarrative.Location = new System.Drawing.Point(24, 71);
             this.chkNarrative.Name = "chkNarrative";
             this.chkNarrative.Size = new System.Drawing.Size(15, 14);
             this.chkNarrative.TabIndex = 31;
@@ -848,7 +1010,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(55, 75);
+            this.label7.Location = new System.Drawing.Point(44, 43);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(90, 16);
             this.label7.TabIndex = 26;
@@ -859,7 +1021,7 @@
             this.Rate_Presentation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Rate_Presentation.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Rate_Presentation.ForeColor = System.Drawing.Color.White;
-            this.Rate_Presentation.Location = new System.Drawing.Point(222, 74);
+            this.Rate_Presentation.Location = new System.Drawing.Point(211, 42);
             this.Rate_Presentation.Maximum = new decimal(new int[] {
             10,
             0,
@@ -879,6 +1041,8 @@
             0,
             0});
             this.Rate_Presentation.ValueChanged += new System.EventHandler(this.Rate_Presentation_ValueChanged);
+            this.Rate_Presentation.Enter += new System.EventHandler(this.Rate_Presentation_Enter);
+            this.Rate_Presentation.Leave += new System.EventHandler(this.Rate_Presentation_Leave);
             // 
             // chkPresentation
             // 
@@ -887,7 +1051,7 @@
             this.chkPresentation.Checked = true;
             this.chkPresentation.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkPresentation.ForeColor = System.Drawing.Color.Silver;
-            this.chkPresentation.Location = new System.Drawing.Point(34, 77);
+            this.chkPresentation.Location = new System.Drawing.Point(23, 45);
             this.chkPresentation.Name = "chkPresentation";
             this.chkPresentation.Size = new System.Drawing.Size(15, 14);
             this.chkPresentation.TabIndex = 28;
@@ -898,7 +1062,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(55, 49);
+            this.label8.Location = new System.Drawing.Point(44, 17);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 16);
             this.label8.TabIndex = 14;
@@ -909,7 +1073,7 @@
             this.Rate_Gameplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Rate_Gameplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Rate_Gameplay.ForeColor = System.Drawing.Color.White;
-            this.Rate_Gameplay.Location = new System.Drawing.Point(222, 48);
+            this.Rate_Gameplay.Location = new System.Drawing.Point(211, 16);
             this.Rate_Gameplay.Maximum = new decimal(new int[] {
             10,
             0,
@@ -929,6 +1093,8 @@
             0,
             0});
             this.Rate_Gameplay.ValueChanged += new System.EventHandler(this.Rate_Gameplay_ValueChanged);
+            this.Rate_Gameplay.Enter += new System.EventHandler(this.Rate_Gameplay_Enter);
+            this.Rate_Gameplay.Leave += new System.EventHandler(this.Rate_Gameplay_Leave);
             // 
             // chkGameplay
             // 
@@ -937,245 +1103,11 @@
             this.chkGameplay.Checked = true;
             this.chkGameplay.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkGameplay.ForeColor = System.Drawing.Color.Silver;
-            this.chkGameplay.Location = new System.Drawing.Point(34, 51);
+            this.chkGameplay.Location = new System.Drawing.Point(23, 19);
             this.chkGameplay.Name = "chkGameplay";
             this.chkGameplay.Size = new System.Drawing.Size(15, 14);
             this.chkGameplay.TabIndex = 25;
             this.chkGameplay.UseVisualStyleBackColor = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(174)))), ((int)(((byte)(200)))));
-            this.label10.Location = new System.Drawing.Point(25, 18);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 16);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Game Info";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(229, 806);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(15, 10);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox11.TabIndex = 23;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Visible = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(208, 806);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(15, 10);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox10.TabIndex = 22;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Visible = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(187, 806);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(15, 10);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox9.TabIndex = 21;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Visible = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(166, 806);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(15, 10);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox8.TabIndex = 20;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Visible = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(145, 806);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(15, 10);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox7.TabIndex = 19;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Visible = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(124, 806);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(15, 10);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox6.TabIndex = 18;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Visible = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(103, 806);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(15, 10);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 17;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Visible = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(82, 806);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(15, 10);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Visible = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(61, 806);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(15, 10);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(40, 806);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 10);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(49, 232);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 16);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Note";
-            // 
-            // Input_Note
-            // 
-            this.Input_Note.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Input_Note.Location = new System.Drawing.Point(49, 253);
-            this.Input_Note.Name = "Input_Note";
-            this.Input_Note.Size = new System.Drawing.Size(229, 23);
-            this.Input_Note.TabIndex = 6;
-            this.Input_Note.Enter += new System.EventHandler(this.Input_Note_Enter);
-            this.Input_Note.Leave += new System.EventHandler(this.Input_Note_Leave);
-            // 
-            // Input_Year
-            // 
-            this.Input_Year.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Input_Year.Location = new System.Drawing.Point(187, 194);
-            this.Input_Year.Name = "Input_Year";
-            this.Input_Year.Size = new System.Drawing.Size(91, 23);
-            this.Input_Year.TabIndex = 5;
-            this.Input_Year.Enter += new System.EventHandler(this.Input_Year_Enter);
-            this.Input_Year.Leave += new System.EventHandler(this.Input_Year_Leave);
-            // 
-            // Input_Month
-            // 
-            this.Input_Month.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Input_Month.Location = new System.Drawing.Point(118, 194);
-            this.Input_Month.Name = "Input_Month";
-            this.Input_Month.Size = new System.Drawing.Size(63, 23);
-            this.Input_Month.TabIndex = 4;
-            this.Input_Month.Enter += new System.EventHandler(this.Input_Month_Enter);
-            this.Input_Month.Leave += new System.EventHandler(this.Input_Month_Leave);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(49, 173);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Date";
-            // 
-            // Input_Day
-            // 
-            this.Input_Day.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Input_Day.Location = new System.Drawing.Point(49, 194);
-            this.Input_Day.Name = "Input_Day";
-            this.Input_Day.Size = new System.Drawing.Size(63, 23);
-            this.Input_Day.TabIndex = 3;
-            this.Input_Day.Enter += new System.EventHandler(this.Input_Day_Enter);
-            this.Input_Day.Leave += new System.EventHandler(this.Input_Day_Leave);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(49, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Game";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(49, 111);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Location";
-            // 
-            // Input_Location
-            // 
-            this.Input_Location.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Input_Location.Location = new System.Drawing.Point(49, 132);
-            this.Input_Location.Name = "Input_Location";
-            this.Input_Location.Size = new System.Drawing.Size(229, 23);
-            this.Input_Location.TabIndex = 2;
-            this.Input_Location.Enter += new System.EventHandler(this.Input_Location_Enter);
-            this.Input_Location.Leave += new System.EventHandler(this.Input_Location_Leave);
-            // 
-            // Input_Game
-            // 
-            this.Input_Game.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Input_Game.Location = new System.Drawing.Point(49, 69);
-            this.Input_Game.Name = "Input_Game";
-            this.Input_Game.Size = new System.Drawing.Size(229, 23);
-            this.Input_Game.TabIndex = 1;
-            this.Input_Game.Enter += new System.EventHandler(this.Input_Game_Enter);
-            this.Input_Game.Leave += new System.EventHandler(this.Input_Game_Leave);
-            // 
-            // Pnl_NavSplitter
-            // 
-            this.Pnl_NavSplitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(174)))), ((int)(((byte)(200)))));
-            this.Pnl_NavSplitter.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Pnl_NavSplitter.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_NavSplitter.Name = "Pnl_NavSplitter";
-            this.Pnl_NavSplitter.Size = new System.Drawing.Size(2, 875);
-            this.Pnl_NavSplitter.TabIndex = 0;
             // 
             // Main
             // 
@@ -1203,6 +1135,10 @@
             this.panel2.ResumeLayout(false);
             this.Pnl_SideContent.ResumeLayout(false);
             this.Pnl_SideContent.PerformLayout();
+            this.Pnl_HideScore.ResumeLayout(false);
+            this.Pnl_HideScore.PerformLayout();
+            this.Pnl_GameInfo.ResumeLayout(false);
+            this.Pnl_GameInfo.PerformLayout();
             this.Pnl_Score.ResumeLayout(false);
             this.Pnl_Score.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Impression)).EndInit();
@@ -1214,16 +1150,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Narrative)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Presentation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Gameplay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1261,17 +1187,7 @@
         private TextBox Input_Day;
         private CheckBox chkGameplay;
         private NumericUpDown Rate_Gameplay;
-        private PictureBox pictureBox11;
-        private PictureBox pictureBox10;
-        private PictureBox pictureBox9;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
         private Label label8;
-        private PictureBox pictureBox2;
         private Panel Pnl_Score;
         private Label label7;
         private NumericUpDown Rate_Presentation;
@@ -1304,7 +1220,11 @@
         private Panel Pnl_SumScore;
         private Button button4;
         private Button BtnCommit;
-        private Label label9;
         private CheckBox chkReplay;
+        private Panel Pnl_GameInfo;
+        private Panel Pnl_GameInfoBackgroundSplitter;
+        private Panel panel3;
+        private Panel Pnl_HideScore;
+        private Label label9;
     }
 }

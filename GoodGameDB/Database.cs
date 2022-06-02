@@ -110,7 +110,7 @@ namespace GoodGameDB
         {
             if (sender is Panel panel)
             {
-                panel.BackColor = Color.FromArgb(118, 174, 200);
+                panel.BackColor = Color.FromArgb(0, 171, 255);
                 //panel.BackColor = Color.FromArgb(240, 240, 240); 
             }
         }
@@ -155,7 +155,7 @@ namespace GoodGameDB
                 {
                     if (("Pnl_" + line[1].ToString()) == panel.Name)
                     {
-                        panel.BackColor = Color.FromArgb(118, 174, 200);
+                        panel.BackColor = Color.FromArgb(0, 171, 255);
                         panel.MouseEnter -= MouseEnterOnDatabase;
                         panel.MouseLeave -= MouseLeaveOnDatabase;
 

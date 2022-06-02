@@ -82,7 +82,7 @@
             // 
             this.Note.AutoSize = true;
             this.Note.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Note.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(174)))), ((int)(((byte)(200)))));
+            this.Note.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.Note.Location = new System.Drawing.Point(857, 43);
             this.Note.Name = "Note";
             this.Note.Size = new System.Drawing.Size(47, 18);
@@ -110,7 +110,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(174)))), ((int)(((byte)(200)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.label4.Location = new System.Drawing.Point(750, 43);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 18);
@@ -121,7 +121,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(174)))), ((int)(((byte)(200)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.label3.Location = new System.Drawing.Point(550, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 18);
@@ -132,7 +132,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(174)))), ((int)(((byte)(200)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.label2.Location = new System.Drawing.Point(150, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 18);
@@ -143,7 +143,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(174)))), ((int)(((byte)(200)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(14, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 18);
@@ -201,7 +201,7 @@
             this.Lbl_Title.AutoSize = true;
             this.Lbl_Title.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_Title.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lbl_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(174)))), ((int)(((byte)(200)))));
+            this.Lbl_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.Lbl_Title.Location = new System.Drawing.Point(12, 14);
             this.Lbl_Title.Name = "Lbl_Title";
             this.Lbl_Title.Size = new System.Drawing.Size(36, 14);
@@ -301,7 +301,7 @@
             // 
             // Pnl_InfoSplitter
             // 
-            this.Pnl_InfoSplitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(174)))), ((int)(((byte)(200)))));
+            this.Pnl_InfoSplitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.Pnl_InfoSplitter.Dock = System.Windows.Forms.DockStyle.Right;
             this.Pnl_InfoSplitter.Location = new System.Drawing.Point(346, 0);
             this.Pnl_InfoSplitter.Name = "Pnl_InfoSplitter";
