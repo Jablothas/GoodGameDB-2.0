@@ -48,8 +48,6 @@
             this.Btn_Stats = new System.Windows.Forms.Button();
             this.Btn_Add = new System.Windows.Forms.Button();
             this.Pnl_SideContent = new System.Windows.Forms.Panel();
-            this.Pnl_HideScore = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.chkReplay = new System.Windows.Forms.CheckBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -69,7 +67,9 @@
             this.Pnl_GameInfoBackgroundSplitter = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.Pnl_Score = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.Pnl_HideScore = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Pnl_ScoreSplitter = new System.Windows.Forms.Panel();
             this.Pnl_SumScore = new System.Windows.Forms.Panel();
             this.Lbl_SumScore = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -100,6 +100,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.Rate_Gameplay = new System.Windows.Forms.NumericUpDown();
             this.chkGameplay = new System.Windows.Forms.CheckBox();
+            this.Lbl_UserInfo = new System.Windows.Forms.Label();
             this.Pnl_Content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_MiniWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_WindowClose)).BeginInit();
@@ -109,9 +110,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.Pnl_SideContent.SuspendLayout();
-            this.Pnl_HideScore.SuspendLayout();
             this.Pnl_GameInfo.SuspendLayout();
             this.Pnl_Score.SuspendLayout();
+            this.Pnl_HideScore.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Impression)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Balance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Pacing)).BeginInit();
@@ -323,7 +324,7 @@
             // Pnl_SideContent
             // 
             this.Pnl_SideContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.Pnl_SideContent.Controls.Add(this.Pnl_HideScore);
+            this.Pnl_SideContent.Controls.Add(this.Lbl_UserInfo);
             this.Pnl_SideContent.Controls.Add(this.chkReplay);
             this.Pnl_SideContent.Controls.Add(this.button4);
             this.Pnl_SideContent.Controls.Add(this.label10);
@@ -347,26 +348,6 @@
             this.Pnl_SideContent.Size = new System.Drawing.Size(280, 875);
             this.Pnl_SideContent.TabIndex = 6;
             this.Pnl_SideContent.Visible = false;
-            // 
-            // Pnl_HideScore
-            // 
-            this.Pnl_HideScore.Controls.Add(this.label9);
-            this.Pnl_HideScore.Location = new System.Drawing.Point(5, 346);
-            this.Pnl_HideScore.Name = "Pnl_HideScore";
-            this.Pnl_HideScore.Size = new System.Drawing.Size(275, 277);
-            this.Pnl_HideScore.TabIndex = 3;
-            this.Pnl_HideScore.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(20, 13);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(16, 16);
-            this.label9.TabIndex = 32;
-            this.label9.Text = "/";
             // 
             // chkReplay
             // 
@@ -397,7 +378,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.label10.Location = new System.Drawing.Point(25, 10);
+            this.label10.Location = new System.Drawing.Point(13, 18);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(176, 16);
             this.label10.TabIndex = 29;
@@ -464,7 +445,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.label13.Location = new System.Drawing.Point(25, 314);
+            this.label13.Location = new System.Drawing.Point(13, 324);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(153, 16);
             this.label13.TabIndex = 31;
@@ -546,7 +527,7 @@
             // 
             // Pnl_GameInfoBackgroundSplitter
             // 
-            this.Pnl_GameInfoBackgroundSplitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.Pnl_GameInfoBackgroundSplitter.BackColor = System.Drawing.Color.DimGray;
             this.Pnl_GameInfoBackgroundSplitter.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_GameInfoBackgroundSplitter.Location = new System.Drawing.Point(0, 0);
             this.Pnl_GameInfoBackgroundSplitter.Name = "Pnl_GameInfoBackgroundSplitter";
@@ -566,7 +547,8 @@
             // 
             // Pnl_Score
             // 
-            this.Pnl_Score.Controls.Add(this.panel3);
+            this.Pnl_Score.Controls.Add(this.Pnl_HideScore);
+            this.Pnl_Score.Controls.Add(this.Pnl_ScoreSplitter);
             this.Pnl_Score.Controls.Add(this.Pnl_SumScore);
             this.Pnl_Score.Controls.Add(this.Lbl_SumScore);
             this.Pnl_Score.Controls.Add(this.label19);
@@ -602,14 +584,34 @@
             this.Pnl_Score.Size = new System.Drawing.Size(347, 276);
             this.Pnl_Score.TabIndex = 30;
             // 
-            // panel3
+            // Pnl_HideScore
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(347, 2);
-            this.panel3.TabIndex = 53;
+            this.Pnl_HideScore.Controls.Add(this.label9);
+            this.Pnl_HideScore.Location = new System.Drawing.Point(0, 3);
+            this.Pnl_HideScore.Name = "Pnl_HideScore";
+            this.Pnl_HideScore.Size = new System.Drawing.Size(275, 277);
+            this.Pnl_HideScore.TabIndex = 3;
+            this.Pnl_HideScore.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(20, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(16, 16);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "/";
+            // 
+            // Pnl_ScoreSplitter
+            // 
+            this.Pnl_ScoreSplitter.BackColor = System.Drawing.Color.DimGray;
+            this.Pnl_ScoreSplitter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_ScoreSplitter.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_ScoreSplitter.Name = "Pnl_ScoreSplitter";
+            this.Pnl_ScoreSplitter.Size = new System.Drawing.Size(347, 2);
+            this.Pnl_ScoreSplitter.TabIndex = 53;
             // 
             // Pnl_SumScore
             // 
@@ -623,7 +625,7 @@
             // 
             this.Lbl_SumScore.AutoSize = true;
             this.Lbl_SumScore.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lbl_SumScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.Lbl_SumScore.ForeColor = System.Drawing.Color.White;
             this.Lbl_SumScore.Location = new System.Drawing.Point(203, 253);
             this.Lbl_SumScore.Name = "Lbl_SumScore";
             this.Lbl_SumScore.Size = new System.Drawing.Size(25, 16);
@@ -634,7 +636,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(46, 253);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(80, 16);
@@ -1109,6 +1111,16 @@
             this.chkGameplay.TabIndex = 25;
             this.chkGameplay.UseVisualStyleBackColor = false;
             // 
+            // Lbl_UserInfo
+            // 
+            this.Lbl_UserInfo.AutoSize = true;
+            this.Lbl_UserInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.Lbl_UserInfo.Location = new System.Drawing.Point(22, 800);
+            this.Lbl_UserInfo.Name = "Lbl_UserInfo";
+            this.Lbl_UserInfo.Size = new System.Drawing.Size(168, 16);
+            this.Lbl_UserInfo.TabIndex = 50;
+            this.Lbl_UserInfo.Text = "Data succesfully stored!";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1135,12 +1147,12 @@
             this.panel2.ResumeLayout(false);
             this.Pnl_SideContent.ResumeLayout(false);
             this.Pnl_SideContent.PerformLayout();
-            this.Pnl_HideScore.ResumeLayout(false);
-            this.Pnl_HideScore.PerformLayout();
             this.Pnl_GameInfo.ResumeLayout(false);
             this.Pnl_GameInfo.PerformLayout();
             this.Pnl_Score.ResumeLayout(false);
             this.Pnl_Score.PerformLayout();
+            this.Pnl_HideScore.ResumeLayout(false);
+            this.Pnl_HideScore.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Impression)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Balance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Pacing)).EndInit();
@@ -1223,8 +1235,9 @@
         private CheckBox chkReplay;
         private Panel Pnl_GameInfo;
         private Panel Pnl_GameInfoBackgroundSplitter;
-        private Panel panel3;
+        private Panel Pnl_ScoreSplitter;
         private Panel Pnl_HideScore;
         private Label label9;
+        private Label Lbl_UserInfo;
     }
 }
