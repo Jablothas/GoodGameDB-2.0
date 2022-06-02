@@ -30,6 +30,7 @@ namespace GoodGameDB
         public decimal SumScore = 0;
 
         // Save current score values
+        string Gametitle;
         int sGameplay = 0;
         int sPresentation = 0;
         int sNarrative = 0;
@@ -74,11 +75,12 @@ namespace GoodGameDB
         private void BtnCommit_Click(object sender, EventArgs e)
         {
             DateComplete = Input_Year.Text + "-" + Input_Month.Text + "-" + Input_Day.Text;
+            Gametitle = Input_Game.Text;
 
             if (ReplayStatus == false)
             {
                 ConnectDB.Insert("INSERT INTO score_values (name, gameplay, presentation, narrative, quality, sound, content, pacing, balance, impression, total)" +
-                    "VALUES ('" + Input_Game.Text + "'," +
+                    "VALUES ('" + Gametitle + "'," +
                             "'" + sGameplay + "'," +
                             "'" + sPresentation + "'," +
                             "'" + sNarrative + "'," +
@@ -89,23 +91,16 @@ namespace GoodGameDB
                             "'" + sBalance + "'," +
                             "'" + sImpression + "'," +
                             "'" + sTotal + "')");
-
                 ConnectDB.Close();
-                // wip query: INSERT INTO games (games.name, location, date, note, score, replay, score_values.name, gameplay, presentation, narrative, quality, sound, content, pacing, balance, impression, total)
-                SQLiteDataReader reader = ConnectDB.Reader("SELECT * FROM games INNER JOIN score_values ON games.score = score_values.s_id");
 
-                // Needs serious rework I think
-                while (reader.Read())
-                {
-                    if (Convert.ToString(reader["name"]) == Input_Game.Text)
-                    {
-                        foreignKeyID = Convert.ToInt32(reader["score_values.s_id"]);
-                        MessageBox.Show("" + foreignKeyID);
-                    }
+                SQLiteDataReader reader = ConnectDB.Reader("SELECT * FROM score_values WHERE name = '" + Gametitle + "'");
+                reader.Read();
 
-                }
-
+                foreignKeyID = Convert.ToInt32(reader[0]);
+                MessageBox.Show("KeyID: " + foreignKeyID);
+                reader.Close();
                 ConnectDB.Close();
+
                 ConnectDB.Insert("INSERT INTO games (name, date, location, note, score, replay)" +
                     "VALUES ('" + Input_Game.Text + "'," +
                             "'" + DateComplete + "'," +
@@ -114,7 +109,6 @@ namespace GoodGameDB
                             "'" + foreignKeyID + "'," +
                             "'" + "0" +
                     "')"); ;
-
                 ConnectDB.Close();
             }
         }

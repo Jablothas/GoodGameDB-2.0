@@ -25,10 +25,9 @@ namespace GoodGameDB
 
         public static void Insert(string query)
         {
-            SQLiteConnection sql_connect;
-            sql_connect = new SQLiteConnection("Data source = data.db");
-            sql_connect.Open();
-            SQLiteCommand InsertSQL = new SQLiteCommand(query, sql_connect);
+            conn = new SQLiteConnection(@"Data source = data.db");
+            conn.Open();
+            SQLiteCommand InsertSQL = new SQLiteCommand(query, conn);
             InsertSQL.ExecuteNonQuery();
         }
 
