@@ -31,16 +31,16 @@ namespace GoodGameDB
 
         // Save current score values
         string Gametitle;
-        int sGameplay = 0;
-        int sPresentation = 0;
-        int sNarrative = 0;
-        int sQuality = 0;
-        int sSound = 0;
-        int sContent = 0;
-        int sPacing = 0;
-        int sBalance = 0;
-        int sImpression = 0;
-        int sTotal = 0;
+        int sGameplay = 1;
+        int sPresentation = 1;
+        int sNarrative = 1;
+        int sQuality = 1;
+        int sSound = 1;
+        int sContent = 1;
+        int sPacing = 1;
+        int sBalance = 1;
+        int sImpression = 1;
+        int sTotal = 1;
 
         // Datafields for Input
         bool ReplayStatus = false;
@@ -76,6 +76,16 @@ namespace GoodGameDB
         {
             DateComplete = Input_Year.Text + "-" + Input_Month.Text + "-" + Input_Day.Text;
             Gametitle = Input_Game.Text;
+            sGameplay = Convert.ToInt32(Rate_Gameplay.Value);
+            sPresentation = Convert.ToInt32(Rate_Presentation.Value);
+            sNarrative = Convert.ToInt32(Rate_Narrative.Value);
+            sQuality = Convert.ToInt32(Rate_Quality.Value);
+            sSound = Convert.ToInt32(Rate_Sound.Value);
+            sContent = Convert.ToInt32(Rate_Content.Value);
+            sPacing = Convert.ToInt32(Rate_Pacing.Value);
+            sBalance = Convert.ToInt32(Rate_Balance.Value);
+            sImpression = Convert.ToInt32(Rate_Impression.Value);
+            sTotal = sGameplay + sPresentation + sNarrative + sQuality + sSound + sContent + sPacing + sBalance + sImpression + 10;
 
             if (ReplayStatus == false)
             {
