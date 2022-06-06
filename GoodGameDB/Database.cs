@@ -95,6 +95,13 @@ namespace GoodGameDB
                     AutoSize = true,
                 };
 
+                string[] tmp_note;
+                if (Note.Text.Contains('\n'))
+                {
+                    tmp_note = Note.Text.Split('\n');
+                    Note.Text = tmp_note[0];
+                }
+
                 Pnl_Data.Controls.Add(Pnl_Background);
                 Pnl_Data.Controls.Add(Pnl_Splitter);
                 Pnl_Background.Controls.Add(Name);

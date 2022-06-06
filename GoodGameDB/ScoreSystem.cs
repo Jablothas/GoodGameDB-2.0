@@ -141,7 +141,7 @@ namespace GoodGameDB
                 panel.Controls.Add(PicBox);
                 xPos += 17;
             }
-        }
 
+        }
     }
 }

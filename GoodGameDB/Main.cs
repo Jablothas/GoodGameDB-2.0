@@ -26,7 +26,7 @@ namespace GoodGameDB
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-        public static Panel PanelSideContent;
+        public static Panel PanelSideContent = null;
         public decimal SumScore = 0;
 
         // Save current score values
@@ -46,13 +46,37 @@ namespace GoodGameDB
         bool ReplayStatus = false;
         string DateComplete;
         int foreignKeyID = 0;
-        string CurrentItemName; 
+
+        ScorePreview ScorePreviewGameplay = new ScorePreview();
+        ScorePreview ScorePreviewPresentation = new ScorePreview();
+        ScorePreview ScorePreviewNarrative = new ScorePreview();
+        ScorePreview ScorePreviewQuality = new ScorePreview();
+        ScorePreview ScorePreviewSound = new ScorePreview();
+        ScorePreview ScorePreviewContent = new ScorePreview();
+        ScorePreview ScorePreviewPacing = new ScorePreview();
+        ScorePreview ScorePreviewBalance = new ScorePreview();
+        ScorePreview ScorePreviewImpression = new ScorePreview();
+        ScorePreview ScoreSum = new ScorePreview();
 
         public Main()
         {
             InitializeComponent();
             OpenForm(new Database());
             PanelSideContent = Pnl_SideContent;
+
+
+            ScorePreviewGameplay.Create(10, 20, "Gameplay", Pnl_Score);
+            ScorePreviewPresentation.Create(10, 50, "Presentation", Pnl_Score);
+            ScorePreviewNarrative.Create(10, 80, "Narrative", Pnl_Score);
+            ScorePreviewQuality.Create(10, 110, "Quality", Pnl_Score);
+            ScorePreviewSound.Create(10, 140, "Sound", Pnl_Score);
+            ScorePreviewContent.Create(10, 170, "Content", Pnl_Score);
+            ScorePreviewPacing.Create(10, 200, "Pacing", Pnl_Score);
+            ScorePreviewBalance.Create(10, 230, "Balance", Pnl_Score);
+            ScorePreviewImpression.Create(10, 260, "Impression", Pnl_Score);
+
+            ScoreSum.SumCreate(335, 300, 19, Pnl_Score);
+
         }
 
         public void OpenForm(Form childForm)
@@ -74,6 +98,8 @@ namespace GoodGameDB
 
         private void BtnCommit_Click(object sender, EventArgs e)
         {
+            Lbl_UserInfo.Text = Input_Game.Text + " saved to database!";
+
             DateComplete = Input_Year.Text + "-" + Input_Month.Text + "-" + Input_Day.Text;
             Gametitle = Input_Game.Text;
             sGameplay = Convert.ToInt32(Rate_Gameplay.Value);
@@ -186,61 +212,79 @@ namespace GoodGameDB
         {
             SumScore = Rate_Gameplay.Value + Rate_Presentation.Value + Rate_Narrative.Value + Rate_Quality.Value +
             Rate_Sound.Value + Rate_Content.Value + Rate_Pacing.Value + Rate_Balance.Value + Rate_Impression.Value + 10;
-            Lbl_SumScore.Text = SumScore + "";
+            //Lbl_SumScore.Text = SumScore + "";
         }
 
         private void Rate_Gameplay_ValueChanged(object sender, EventArgs e)
         {
             CountSum();
             sGameplay = Convert.ToInt32(Rate_Gameplay.Value);
+            ScoreSum.SumUpdate(Convert.ToInt32(SumScore));
+            ScorePreviewGameplay.Update(sGameplay);
         }
 
         private void Rate_Presentation_ValueChanged(object sender, EventArgs e)
         {
             CountSum();
             sPresentation = Convert.ToInt32(Rate_Presentation.Value);
+            ScoreSum.SumUpdate(Convert.ToInt32(SumScore));
+            ScorePreviewPresentation.Update(sPresentation);
         }
 
         private void Rate_Narrative_ValueChanged(object sender, EventArgs e)
         {
             CountSum();
             sNarrative = Convert.ToInt32(Rate_Narrative.Value);
+            ScoreSum.SumUpdate(Convert.ToInt32(SumScore));
+            ScorePreviewNarrative.Update(sNarrative);
         }
 
         private void Rate_Quality_ValueChanged(object sender, EventArgs e)
         {
             CountSum();
             sQuality = Convert.ToInt32(Rate_Quality.Value);
+            ScoreSum.SumUpdate(Convert.ToInt32(SumScore));
+            ScorePreviewQuality.Update(sQuality);
         }
 
         private void Rate_Sound_ValueChanged(object sender, EventArgs e)
         {
             CountSum();
             sSound = Convert.ToInt32(Rate_Sound.Value);
+            ScoreSum.SumUpdate(Convert.ToInt32(SumScore));
+            ScorePreviewSound.Update(sSound);
         }
 
         private void Rate_Content_ValueChanged(object sender, EventArgs e)
         {
             CountSum();
             sContent = Convert.ToInt32(Rate_Content.Value);
+            ScoreSum.SumUpdate(Convert.ToInt32(SumScore));
+            ScorePreviewContent.Update(sContent);
         }
 
         private void Rate_Pacing_ValueChanged(object sender, EventArgs e)
         {
             CountSum();
             sPacing = Convert.ToInt32(Rate_Pacing.Value);
+            ScoreSum.SumUpdate(Convert.ToInt32(SumScore));
+            ScorePreviewPacing.Update(sPacing);
         }
 
         private void Rate_Balance_ValueChanged(object sender, EventArgs e)
         {
             CountSum();
             sBalance = Convert.ToInt32(Rate_Balance.Value);
+            ScoreSum.SumUpdate(Convert.ToInt32(SumScore));
+            ScorePreviewBalance.Update(sBalance);
         }
 
         private void Rate_Impression_ValueChanged(object sender, EventArgs e)
         {
             CountSum();
             sImpression = Convert.ToInt32(Rate_Impression.Value);
+            ScoreSum.SumUpdate(Convert.ToInt32(SumScore));
+            ScorePreviewImpression.Update(sImpression);
         }
 
         private void chkReplay_CheckedChanged(object sender, EventArgs e)
@@ -405,6 +449,16 @@ namespace GoodGameDB
         private void Rate_Impression_Leave(object sender, EventArgs e)
         {
             Rate_Impression.BackColor = Color.FromArgb(20, 20, 20);
+        }
+
+        private void Input_Note_Enter_1(object sender, EventArgs e)
+        {
+            Input_Note.BackColor = Color.FromArgb(0, 171, 255);
+        }
+
+        private void Input_Note_Leave_1(object sender, EventArgs e)
+        {
+            Input_Note.BackColor = Color.White;
         }
     }
 }
