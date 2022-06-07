@@ -29,6 +29,10 @@ namespace GoodGameDB
         public static Panel PanelSideContent = null;
         public decimal SumScore = 0;
 
+        // Public panels for child access
+        public static Panel EditPanel;
+        public static bool EditMode;
+
         // Save current score values
         string Gametitle;
         int sGameplay = 1;
@@ -63,6 +67,9 @@ namespace GoodGameDB
             InitializeComponent();
             OpenForm(new Database());
             PanelSideContent = Pnl_SideContent;
+
+            EditPanel = Pnl_SideContent;
+            EditMode = false;
 
 
             ScorePreviewGameplay.Create(10, 20, "Gameplay", Pnl_Score);

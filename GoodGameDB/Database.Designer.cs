@@ -51,6 +51,7 @@
             this.Lbl_PtDate = new System.Windows.Forms.Label();
             this.Pnl_InfoData = new System.Windows.Forms.Panel();
             this.Pnl_InfoSplitter = new System.Windows.Forms.Panel();
+            this.Btn_Edit = new System.Windows.Forms.PictureBox();
             this.Pnl_SubMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Search)).BeginInit();
             this.Pnl_Info.SuspendLayout();
@@ -59,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Pnl_InfoOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Hide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Edit)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_SubMenu
@@ -240,6 +242,7 @@
             // 
             // Pnl_InfoOptions
             // 
+            this.Pnl_InfoOptions.Controls.Add(this.Btn_Edit);
             this.Pnl_InfoOptions.Controls.Add(this.Btn_Hide);
             this.Pnl_InfoOptions.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Pnl_InfoOptions.Location = new System.Drawing.Point(0, 811);
@@ -308,6 +311,17 @@
             this.Pnl_InfoSplitter.Size = new System.Drawing.Size(5, 875);
             this.Pnl_InfoSplitter.TabIndex = 0;
             // 
+            // Btn_Edit
+            // 
+            this.Btn_Edit.Image = global::GoodGameDB.Properties.Resources.hide_popup;
+            this.Btn_Edit.Location = new System.Drawing.Point(51, 22);
+            this.Btn_Edit.Name = "Btn_Edit";
+            this.Btn_Edit.Size = new System.Drawing.Size(30, 30);
+            this.Btn_Edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_Edit.TabIndex = 1;
+            this.Btn_Edit.TabStop = false;
+            this.Btn_Edit.Click += new System.EventHandler(this.Btn_Edit_Click);
+            // 
             // Database
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
@@ -332,6 +346,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Pnl_InfoOptions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Hide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Edit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,5 +376,6 @@
         private PictureBox pictureBox2;
         private Label Note;
         private Panel Pnl_SideMenu_Title;
+        private PictureBox Btn_Edit;
     }
 }

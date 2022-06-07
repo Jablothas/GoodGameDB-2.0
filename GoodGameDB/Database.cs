@@ -21,6 +21,15 @@ namespace GoodGameDB
         Panel latestActivePnl = null;
         public static Panel InfoPanel;
 
+        // cache files for edit mode
+        public static string game_name, location, date_day,
+                             date_month, date_year, note;
+        public static bool replay;                        
+        public static int tmp_gameplay, tmp_presentation, tmp_narrative,
+                          tmp_quality, tmp_sound, tmp_content,
+                          tmp_pacing, tmp_balance, tmp_impression;
+
+
         public Database()
         {
             InitializeComponent();
@@ -40,7 +49,7 @@ namespace GoodGameDB
                 "ORDER BY date ASC";
             table = ConnectDB.CreateDataTable(query);
 
-
+            // Create for each row in database a panel and fills with content
             foreach (DataRow output in table.Rows)
             {
 
@@ -48,7 +57,7 @@ namespace GoodGameDB
 
                 Panel Pnl_Background = new Panel()
                 {
-                    Name = "Pnl_" + output[1].ToString(),
+                    Name = "Pnl_" + output[1].ToString() + output[0],
                     Size = new Size(600, 38),
                     Dock = DockStyle.Top,
                     BackColor = Color.FromArgb(255, 255, 255),
@@ -160,28 +169,40 @@ namespace GoodGameDB
 
                 foreach (DataRow line in table.Rows)
                 {
-                    if (("Pnl_" + line[1].ToString()) == panel.Name)
+                    
+                    if (("Pnl_" + line[1].ToString() + line[0]) == panel.Name)
                     {
+
+                        // Split the date
+                        string[] tmp_datesplit = Convert.ToDateTime(line[2]).ToShortDateString().Split('.');
+                        // 
+                        game_name = line[1].ToString();
+                        date_year = tmp_datesplit[0];
+                        date_month = tmp_datesplit[1];
+                        date_day = tmp_datesplit[2];
+                        location = line[3].ToString();
+                        note = line[4].ToString();
+                        replay = Convert.ToBoolean(line[6]);
+                        tmp_gameplay = Convert.ToInt32(line[9]);
+                        tmp_presentation = Convert.ToInt32(line[10]);
+                        tmp_narrative = Convert.ToInt32(line[11]);
+                        tmp_quality = Convert.ToInt32(line[12]);
+                        tmp_sound = Convert.ToInt32(line[13]);
+                        tmp_content = Convert.ToInt32(line[14]);
+                        tmp_pacing = Convert.ToInt32(line[15]);
+                        tmp_balance = Convert.ToInt32(line[16]);
+                        tmp_impression = Convert.ToInt32(line[17]);
+
+
+                        MessageBox.Show("Selected: " + game_name + "\n" +
+                            "Gameplay: " + tmp_gameplay + "\n" +
+                            "day: " + date_day + "\n" +
+                            "month: " + date_month + "\n" +
+                            "year: " + date_year);
+
                         panel.BackColor = Color.FromArgb(0, 171, 255);
                         panel.MouseEnter -= MouseEnterOnDatabase;
                         panel.MouseLeave -= MouseLeaveOnDatabase;
-
-                        //Label Title = new Label()
-                        //{
-                        //    Text = line[1].ToString(),
-                        //    Location = new Point(125, 17),
-                        //    ForeColor = Color.FromArgb(0, 127, 255),
-                        //    AutoSize = true
-                        //};
-                        //Pnl_InfoData.Controls.Add(Title);
-
-                        //Panel Splitter = new Panel()
-                        //{
-                        //    Location = new Point(0, 49),
-                        //    BackColor = Color.DimGray,
-                        //    Size = new Size(600, 1),
-                        //};
-                        //Pnl_InfoData.Controls.Add(Splitter);
 
                         Lbl_Title.Text = line["name"].ToString();
 
@@ -221,12 +242,20 @@ namespace GoodGameDB
                             Lbl_PtLocation.Text += "@ " + reader["location"] + "\n";
                             Lbl_PtCnt.Text += "" + ptcnt + ".\n";
                         }
-
                         ConnectDB.Close();
-
                     }
                 }
             }
+        }
+
+        private void Btn_Edit_Click(object sender, EventArgs e)
+        {
+            Main.EditPanel.Visible = true;
+            if (Pnl_Info.Visible == true)
+            {
+                Pnl_Info.Visible = false;
+            }
+            
         }
 
         private void Btn_Hide_Click(object sender, EventArgs e)
