@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Database));
             this.Pnl_SubMenu = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Btn_ReloadData = new System.Windows.Forms.PictureBox();
             this.Note = new System.Windows.Forms.Label();
             this.Search = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -45,27 +48,32 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Lbl_Note = new System.Windows.Forms.Label();
             this.Pnl_InfoOptions = new System.Windows.Forms.Panel();
+            this.Btn_Delete = new System.Windows.Forms.PictureBox();
+            this.Btn_Edit = new System.Windows.Forms.PictureBox();
             this.Btn_Hide = new System.Windows.Forms.PictureBox();
             this.Lbl_PtCnt = new System.Windows.Forms.Label();
             this.Lbl_PtLocation = new System.Windows.Forms.Label();
             this.Lbl_PtDate = new System.Windows.Forms.Label();
             this.Pnl_InfoData = new System.Windows.Forms.Panel();
             this.Pnl_InfoSplitter = new System.Windows.Forms.Panel();
-            this.Btn_Edit = new System.Windows.Forms.PictureBox();
             this.Pnl_SubMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_ReloadData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Search)).BeginInit();
             this.Pnl_Info.SuspendLayout();
             this.Pnl_SideMenu_Title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Pnl_InfoOptions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Hide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Hide)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_SubMenu
             // 
             this.Pnl_SubMenu.BackColor = System.Drawing.Color.White;
+            this.Pnl_SubMenu.Controls.Add(this.panel1);
             this.Pnl_SubMenu.Controls.Add(this.Note);
             this.Pnl_SubMenu.Controls.Add(this.Search);
             this.Pnl_SubMenu.Controls.Add(this.textBox1);
@@ -75,19 +83,39 @@
             this.Pnl_SubMenu.Controls.Add(this.label1);
             this.Pnl_SubMenu.Controls.Add(this.Pnl_Data_Splitter);
             this.Pnl_SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Pnl_SubMenu.Location = new System.Drawing.Point(351, 0);
+            this.Pnl_SubMenu.Location = new System.Drawing.Point(426, 0);
             this.Pnl_SubMenu.Name = "Pnl_SubMenu";
-            this.Pnl_SubMenu.Size = new System.Drawing.Size(899, 67);
+            this.Pnl_SubMenu.Size = new System.Drawing.Size(1099, 67);
             this.Pnl_SubMenu.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.Btn_ReloadData);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(1045, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(54, 64);
+            this.panel1.TabIndex = 15;
+            // 
+            // Btn_ReloadData
+            // 
+            this.Btn_ReloadData.Image = ((System.Drawing.Image)(resources.GetObject("Btn_ReloadData.Image")));
+            this.Btn_ReloadData.Location = new System.Drawing.Point(16, 14);
+            this.Btn_ReloadData.Name = "Btn_ReloadData";
+            this.Btn_ReloadData.Size = new System.Drawing.Size(22, 22);
+            this.Btn_ReloadData.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_ReloadData.TabIndex = 14;
+            this.Btn_ReloadData.TabStop = false;
+            this.Btn_ReloadData.Click += new System.EventHandler(this.Btn_ReloadData_Click);
             // 
             // Note
             // 
             this.Note.AutoSize = true;
-            this.Note.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Note.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.Note.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Note.ForeColor = System.Drawing.Color.Black;
             this.Note.Location = new System.Drawing.Point(857, 43);
             this.Note.Name = "Note";
-            this.Note.Size = new System.Drawing.Size(47, 18);
+            this.Note.Size = new System.Drawing.Size(44, 18);
             this.Note.TabIndex = 6;
             this.Note.Text = "Note";
             // 
@@ -96,7 +124,7 @@
             this.Search.Image = global::GoodGameDB.Properties.Resources.search2;
             this.Search.Location = new System.Drawing.Point(488, 11);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(20, 22);
+            this.Search.Size = new System.Drawing.Size(22, 22);
             this.Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Search.TabIndex = 0;
             this.Search.TabStop = false;
@@ -111,44 +139,44 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.label4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(750, 43);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 18);
+            this.label4.Size = new System.Drawing.Size(43, 18);
             this.label4.TabIndex = 4;
             this.label4.Text = "Date";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.label3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(550, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 18);
+            this.label3.Size = new System.Drawing.Size(71, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Location";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.label2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(150, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 18);
+            this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Game";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.label1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(14, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 18);
+            this.label1.Size = new System.Drawing.Size(51, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Score";
             // 
@@ -158,16 +186,16 @@
             this.Pnl_Data_Splitter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Pnl_Data_Splitter.Location = new System.Drawing.Point(0, 64);
             this.Pnl_Data_Splitter.Name = "Pnl_Data_Splitter";
-            this.Pnl_Data_Splitter.Size = new System.Drawing.Size(899, 3);
+            this.Pnl_Data_Splitter.Size = new System.Drawing.Size(1099, 3);
             this.Pnl_Data_Splitter.TabIndex = 0;
             // 
             // Pnl_Data
             // 
             this.Pnl_Data.AutoScroll = true;
             this.Pnl_Data.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pnl_Data.Location = new System.Drawing.Point(351, 67);
+            this.Pnl_Data.Location = new System.Drawing.Point(426, 67);
             this.Pnl_Data.Name = "Pnl_Data";
-            this.Pnl_Data.Size = new System.Drawing.Size(899, 808);
+            this.Pnl_Data.Size = new System.Drawing.Size(1099, 808);
             this.Pnl_Data.TabIndex = 4;
             // 
             // Pnl_Info
@@ -186,7 +214,7 @@
             this.Pnl_Info.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_Info.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Info.Name = "Pnl_Info";
-            this.Pnl_Info.Size = new System.Drawing.Size(351, 875);
+            this.Pnl_Info.Size = new System.Drawing.Size(426, 875);
             this.Pnl_Info.TabIndex = 5;
             // 
             // Pnl_SideMenu_Title
@@ -195,7 +223,7 @@
             this.Pnl_SideMenu_Title.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_SideMenu_Title.Location = new System.Drawing.Point(0, 0);
             this.Pnl_SideMenu_Title.Name = "Pnl_SideMenu_Title";
-            this.Pnl_SideMenu_Title.Size = new System.Drawing.Size(346, 41);
+            this.Pnl_SideMenu_Title.Size = new System.Drawing.Size(421, 41);
             this.Pnl_SideMenu_Title.TabIndex = 13;
             // 
             // Lbl_Title
@@ -242,13 +270,35 @@
             // 
             // Pnl_InfoOptions
             // 
+            this.Pnl_InfoOptions.Controls.Add(this.Btn_Delete);
             this.Pnl_InfoOptions.Controls.Add(this.Btn_Edit);
             this.Pnl_InfoOptions.Controls.Add(this.Btn_Hide);
             this.Pnl_InfoOptions.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Pnl_InfoOptions.Location = new System.Drawing.Point(0, 811);
             this.Pnl_InfoOptions.Name = "Pnl_InfoOptions";
-            this.Pnl_InfoOptions.Size = new System.Drawing.Size(346, 64);
+            this.Pnl_InfoOptions.Size = new System.Drawing.Size(421, 64);
             this.Pnl_InfoOptions.TabIndex = 6;
+            // 
+            // Btn_Delete
+            // 
+            this.Btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Delete.Image")));
+            this.Btn_Delete.Location = new System.Drawing.Point(48, 22);
+            this.Btn_Delete.Name = "Btn_Delete";
+            this.Btn_Delete.Size = new System.Drawing.Size(30, 30);
+            this.Btn_Delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_Delete.TabIndex = 2;
+            this.Btn_Delete.TabStop = false;
+            // 
+            // Btn_Edit
+            // 
+            this.Btn_Edit.Image = global::GoodGameDB.Properties.Resources.edit_white;
+            this.Btn_Edit.Location = new System.Drawing.Point(84, 22);
+            this.Btn_Edit.Name = "Btn_Edit";
+            this.Btn_Edit.Size = new System.Drawing.Size(30, 30);
+            this.Btn_Edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_Edit.TabIndex = 1;
+            this.Btn_Edit.TabStop = false;
+            this.Btn_Edit.Click += new System.EventHandler(this.Btn_Edit_Click);
             // 
             // Btn_Hide
             // 
@@ -306,28 +356,17 @@
             // 
             this.Pnl_InfoSplitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.Pnl_InfoSplitter.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Pnl_InfoSplitter.Location = new System.Drawing.Point(346, 0);
+            this.Pnl_InfoSplitter.Location = new System.Drawing.Point(421, 0);
             this.Pnl_InfoSplitter.Name = "Pnl_InfoSplitter";
             this.Pnl_InfoSplitter.Size = new System.Drawing.Size(5, 875);
             this.Pnl_InfoSplitter.TabIndex = 0;
-            // 
-            // Btn_Edit
-            // 
-            this.Btn_Edit.Image = global::GoodGameDB.Properties.Resources.hide_popup;
-            this.Btn_Edit.Location = new System.Drawing.Point(51, 22);
-            this.Btn_Edit.Name = "Btn_Edit";
-            this.Btn_Edit.Size = new System.Drawing.Size(30, 30);
-            this.Btn_Edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Btn_Edit.TabIndex = 1;
-            this.Btn_Edit.TabStop = false;
-            this.Btn_Edit.Click += new System.EventHandler(this.Btn_Edit_Click);
             // 
             // Database
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1250, 875);
+            this.ClientSize = new System.Drawing.Size(1525, 875);
             this.Controls.Add(this.Pnl_Data);
             this.Controls.Add(this.Pnl_SubMenu);
             this.Controls.Add(this.Pnl_Info);
@@ -337,6 +376,8 @@
             this.Text = "Database";
             this.Pnl_SubMenu.ResumeLayout(false);
             this.Pnl_SubMenu.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_ReloadData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Search)).EndInit();
             this.Pnl_Info.ResumeLayout(false);
             this.Pnl_Info.PerformLayout();
@@ -345,8 +386,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Pnl_InfoOptions.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Hide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Hide)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -377,5 +419,8 @@
         private Label Note;
         private Panel Pnl_SideMenu_Title;
         private PictureBox Btn_Edit;
+        private PictureBox Btn_Delete;
+        private PictureBox Btn_ReloadData;
+        private Panel panel1;
     }
 }

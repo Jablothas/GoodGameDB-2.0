@@ -23,6 +23,14 @@ namespace GoodGameDB
             return reader;
         }
 
+        public static void Update(string query)
+        {
+            conn = new SQLiteConnection(@"Data source = data.db");
+            conn.Open();
+            SQLiteCommand InsertSQL = new SQLiteCommand(query, conn);
+            InsertSQL.ExecuteNonQuery();
+        }
+
         public static void Insert(string query)
         {
             conn = new SQLiteConnection(@"Data source = data.db");

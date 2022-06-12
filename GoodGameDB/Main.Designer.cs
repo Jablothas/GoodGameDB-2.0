@@ -50,10 +50,7 @@
             this.Btn_Stats = new System.Windows.Forms.Button();
             this.Btn_Add = new System.Windows.Forms.Button();
             this.Pnl_SideContent = new System.Windows.Forms.Panel();
-            this.Lbl_UserInfo = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.BtnCommit = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Input_Game = new System.Windows.Forms.TextBox();
@@ -71,9 +68,12 @@
             this.Input_Month = new System.Windows.Forms.TextBox();
             this.Pnl_Score = new System.Windows.Forms.Panel();
             this.Pnl_ScoreSplitter = new System.Windows.Forms.Panel();
+            this.Lbl_UserInfo = new System.Windows.Forms.Label();
             this.Pnl_SumScore = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.Lbl_SumScore = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.BtnCommit = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.Rate_Impression = new System.Windows.Forms.NumericUpDown();
             this.chkImpression = new System.Windows.Forms.CheckBox();
@@ -358,26 +358,7 @@
             this.Pnl_SideContent.Size = new System.Drawing.Size(426, 875);
             this.Pnl_SideContent.TabIndex = 6;
             this.Pnl_SideContent.Visible = false;
-            // 
-            // Lbl_UserInfo
-            // 
-            this.Lbl_UserInfo.AutoSize = true;
-            this.Lbl_UserInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.Lbl_UserInfo.Location = new System.Drawing.Point(15, 437);
-            this.Lbl_UserInfo.Name = "Lbl_UserInfo";
-            this.Lbl_UserInfo.Size = new System.Drawing.Size(0, 16);
-            this.Lbl_UserInfo.TabIndex = 50;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DarkGray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(94, 467);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 25);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = false;
+            this.Pnl_SideContent.VisibleChanged += new System.EventHandler(this.Pnl_SideContent_VisibleChanged);
             // 
             // label10
             // 
@@ -389,18 +370,6 @@
             this.label10.Size = new System.Drawing.Size(176, 16);
             this.label10.TabIndex = 29;
             this.label10.Text = "Playthrough Basic Data";
-            // 
-            // BtnCommit
-            // 
-            this.BtnCommit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.BtnCommit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCommit.Location = new System.Drawing.Point(13, 467);
-            this.BtnCommit.Name = "BtnCommit";
-            this.BtnCommit.Size = new System.Drawing.Size(75, 25);
-            this.BtnCommit.TabIndex = 10;
-            this.BtnCommit.Text = "Save";
-            this.BtnCommit.UseVisualStyleBackColor = false;
-            this.BtnCommit.Click += new System.EventHandler(this.BtnCommit_Click);
             // 
             // label13
             // 
@@ -621,6 +590,15 @@
             this.Pnl_ScoreSplitter.Size = new System.Drawing.Size(420, 2);
             this.Pnl_ScoreSplitter.TabIndex = 53;
             // 
+            // Lbl_UserInfo
+            // 
+            this.Lbl_UserInfo.AutoSize = true;
+            this.Lbl_UserInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.Lbl_UserInfo.Location = new System.Drawing.Point(15, 437);
+            this.Lbl_UserInfo.Name = "Lbl_UserInfo";
+            this.Lbl_UserInfo.Size = new System.Drawing.Size(0, 16);
+            this.Lbl_UserInfo.TabIndex = 50;
+            // 
             // Pnl_SumScore
             // 
             this.Pnl_SumScore.BackColor = System.Drawing.Color.Silver;
@@ -629,6 +607,17 @@
             this.Pnl_SumScore.Size = new System.Drawing.Size(372, 1);
             this.Pnl_SumScore.TabIndex = 52;
             this.Pnl_SumScore.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DarkGray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(94, 467);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 25);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Clear";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // Lbl_SumScore
             // 
@@ -652,6 +641,18 @@
             this.label19.Size = new System.Drawing.Size(46, 16);
             this.label19.TabIndex = 50;
             this.label19.Text = "Total:";
+            // 
+            // BtnCommit
+            // 
+            this.BtnCommit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.BtnCommit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCommit.Location = new System.Drawing.Point(13, 467);
+            this.BtnCommit.Name = "BtnCommit";
+            this.BtnCommit.Size = new System.Drawing.Size(75, 25);
+            this.BtnCommit.TabIndex = 10;
+            this.BtnCommit.Text = "Save";
+            this.BtnCommit.UseVisualStyleBackColor = false;
+            this.BtnCommit.Click += new System.EventHandler(this.BtnCommit_Click);
             // 
             // label15
             // 

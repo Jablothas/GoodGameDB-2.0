@@ -21,13 +21,15 @@ namespace GoodGameDB
         Panel latestActivePnl = null;
         public static Panel InfoPanel;
 
+        public static DataRow CurrentGame;
+
         // cache files for edit mode
-        public static string game_name, location, date_day,
-                             date_month, date_year, note;
-        public static bool replay;                        
-        public static int tmp_gameplay, tmp_presentation, tmp_narrative,
-                          tmp_quality, tmp_sound, tmp_content,
-                          tmp_pacing, tmp_balance, tmp_impression;
+        //public static string game_name, location, date_day,
+        //                     date_month, date_year, note;
+        //public static bool replay;                        
+        //public static int tmp_gameplay, tmp_presentation, tmp_narrative,
+        //                  tmp_quality, tmp_sound, tmp_content,
+        //                  tmp_pacing, tmp_balance, tmp_impression;
 
 
         public Database()
@@ -172,33 +174,11 @@ namespace GoodGameDB
                     
                     if (("Pnl_" + line[1].ToString() + line[0]) == panel.Name)
                     {
+                        CurrentGame = line;
+                        Main.tmp_foreignKeyID = Convert.ToInt32(line["score"]);
+                        Main.CurrentTargetID = Convert.ToInt32(line["id"]);
+                        Main.CurrentTargetName = Convert.ToString(line["name"]);
 
-                        // Split the date
-                        string[] tmp_datesplit = Convert.ToDateTime(line[2]).ToShortDateString().Split('.');
-                        // 
-                        game_name = line[1].ToString();
-                        date_year = tmp_datesplit[0];
-                        date_month = tmp_datesplit[1];
-                        date_day = tmp_datesplit[2];
-                        location = line[3].ToString();
-                        note = line[4].ToString();
-                        replay = Convert.ToBoolean(line[6]);
-                        tmp_gameplay = Convert.ToInt32(line[9]);
-                        tmp_presentation = Convert.ToInt32(line[10]);
-                        tmp_narrative = Convert.ToInt32(line[11]);
-                        tmp_quality = Convert.ToInt32(line[12]);
-                        tmp_sound = Convert.ToInt32(line[13]);
-                        tmp_content = Convert.ToInt32(line[14]);
-                        tmp_pacing = Convert.ToInt32(line[15]);
-                        tmp_balance = Convert.ToInt32(line[16]);
-                        tmp_impression = Convert.ToInt32(line[17]);
-
-
-                        MessageBox.Show("Selected: " + game_name + "\n" +
-                            "Gameplay: " + tmp_gameplay + "\n" +
-                            "day: " + date_day + "\n" +
-                            "month: " + date_month + "\n" +
-                            "year: " + date_year);
 
                         panel.BackColor = Color.FromArgb(0, 171, 255);
                         panel.MouseEnter -= MouseEnterOnDatabase;
@@ -250,12 +230,12 @@ namespace GoodGameDB
 
         private void Btn_Edit_Click(object sender, EventArgs e)
         {
+            Main.EditMode = true;
             Main.EditPanel.Visible = true;
             if (Pnl_Info.Visible == true)
             {
                 Pnl_Info.Visible = false;
             }
-            
         }
 
         private void Btn_Hide_Click(object sender, EventArgs e)
@@ -280,6 +260,15 @@ namespace GoodGameDB
         private void Lbl_PtCnt_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Btn_ReloadData_Click(object sender, EventArgs e)
+        {
+            Pnl_Data.Visible = false;
+            Pnl_Data.Controls.Clear();
+            LoadData();
+            Pnl_Data.Visible = true;
+            
         }
     }
 }
