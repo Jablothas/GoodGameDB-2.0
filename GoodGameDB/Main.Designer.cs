@@ -37,6 +37,42 @@
             this.Pnl_BorderTop = new System.Windows.Forms.Panel();
             this.Pnl_HideScore = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.Pnl_Score = new System.Windows.Forms.Panel();
+            this.BtnClear = new System.Windows.Forms.PictureBox();
+            this.BtnCommit = new System.Windows.Forms.PictureBox();
+            this.BtnHide = new System.Windows.Forms.PictureBox();
+            this.Pnl_ScoreSplitter = new System.Windows.Forms.Panel();
+            this.Lbl_UserInfo = new System.Windows.Forms.Label();
+            this.Pnl_SumScore = new System.Windows.Forms.Panel();
+            this.Lbl_SumScore = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.Rate_Impression = new System.Windows.Forms.NumericUpDown();
+            this.chkImpression = new System.Windows.Forms.CheckBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.Rate_Balance = new System.Windows.Forms.NumericUpDown();
+            this.chkBalance = new System.Windows.Forms.CheckBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.Rate_Pacing = new System.Windows.Forms.NumericUpDown();
+            this.chkPacing = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.Rate_Content = new System.Windows.Forms.NumericUpDown();
+            this.chkContent = new System.Windows.Forms.CheckBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Rate_Sound = new System.Windows.Forms.NumericUpDown();
+            this.chkSound = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Rate_Quality = new System.Windows.Forms.NumericUpDown();
+            this.chkQuality = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Rate_Narrative = new System.Windows.Forms.NumericUpDown();
+            this.chkNarrative = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Rate_Presentation = new System.Windows.Forms.NumericUpDown();
+            this.chkPresentation = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Rate_Gameplay = new System.Windows.Forms.NumericUpDown();
+            this.chkGameplay = new System.Windows.Forms.CheckBox();
             this.Btn_MiniWindow = new System.Windows.Forms.PictureBox();
             this.Btn_WindowClose = new System.Windows.Forms.PictureBox();
             this.Pnl_Title = new System.Windows.Forms.Panel();
@@ -66,53 +102,12 @@
             this.Input_Day = new System.Windows.Forms.TextBox();
             this.Input_Year = new System.Windows.Forms.TextBox();
             this.Input_Month = new System.Windows.Forms.TextBox();
-            this.Pnl_Score = new System.Windows.Forms.Panel();
-            this.Pnl_ScoreSplitter = new System.Windows.Forms.Panel();
-            this.Lbl_UserInfo = new System.Windows.Forms.Label();
-            this.Pnl_SumScore = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.Lbl_SumScore = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.BtnCommit = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.Rate_Impression = new System.Windows.Forms.NumericUpDown();
-            this.chkImpression = new System.Windows.Forms.CheckBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.Rate_Balance = new System.Windows.Forms.NumericUpDown();
-            this.chkBalance = new System.Windows.Forms.CheckBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.Rate_Pacing = new System.Windows.Forms.NumericUpDown();
-            this.chkPacing = new System.Windows.Forms.CheckBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.Rate_Content = new System.Windows.Forms.NumericUpDown();
-            this.chkContent = new System.Windows.Forms.CheckBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.Rate_Sound = new System.Windows.Forms.NumericUpDown();
-            this.chkSound = new System.Windows.Forms.CheckBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.Rate_Quality = new System.Windows.Forms.NumericUpDown();
-            this.chkQuality = new System.Windows.Forms.CheckBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.Rate_Narrative = new System.Windows.Forms.NumericUpDown();
-            this.chkNarrative = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Rate_Presentation = new System.Windows.Forms.NumericUpDown();
-            this.chkPresentation = new System.Windows.Forms.CheckBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Rate_Gameplay = new System.Windows.Forms.NumericUpDown();
-            this.chkGameplay = new System.Windows.Forms.CheckBox();
             this.Pnl_Content.SuspendLayout();
             this.Pnl_HideScore.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_MiniWindow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_WindowClose)).BeginInit();
-            this.Pnl_Title.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.Pnl_Search.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.Pnl_SideContent.SuspendLayout();
-            this.Pnl_GameInfo.SuspendLayout();
             this.Pnl_Score.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnClear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCommit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnHide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Impression)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Balance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Pacing)).BeginInit();
@@ -122,6 +117,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Narrative)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Presentation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rate_Gameplay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_MiniWindow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_WindowClose)).BeginInit();
+            this.Pnl_Title.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.Pnl_Search.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.Pnl_SideContent.SuspendLayout();
+            this.Pnl_GameInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -192,9 +196,9 @@
             // Pnl_HideScore
             // 
             this.Pnl_HideScore.Controls.Add(this.label9);
-            this.Pnl_HideScore.Location = new System.Drawing.Point(8, 317);
+            this.Pnl_HideScore.Location = new System.Drawing.Point(6, 349);
             this.Pnl_HideScore.Name = "Pnl_HideScore";
-            this.Pnl_HideScore.Size = new System.Drawing.Size(417, 421);
+            this.Pnl_HideScore.Size = new System.Drawing.Size(422, 421);
             this.Pnl_HideScore.TabIndex = 3;
             this.Pnl_HideScore.Visible = false;
             // 
@@ -209,346 +213,16 @@
             this.label9.TabIndex = 32;
             this.label9.Text = "--";
             // 
-            // Btn_MiniWindow
-            // 
-            this.Btn_MiniWindow.Image = global::GoodGameDB.Properties.Resources.window_mini;
-            this.Btn_MiniWindow.Location = new System.Drawing.Point(17, 1);
-            this.Btn_MiniWindow.Name = "Btn_MiniWindow";
-            this.Btn_MiniWindow.Size = new System.Drawing.Size(26, 27);
-            this.Btn_MiniWindow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Btn_MiniWindow.TabIndex = 4;
-            this.Btn_MiniWindow.TabStop = false;
-            this.Btn_MiniWindow.Click += new System.EventHandler(this.Btn_MiniWindow_Click);
-            // 
-            // Btn_WindowClose
-            // 
-            this.Btn_WindowClose.Image = global::GoodGameDB.Properties.Resources.window_close1;
-            this.Btn_WindowClose.Location = new System.Drawing.Point(47, 1);
-            this.Btn_WindowClose.Name = "Btn_WindowClose";
-            this.Btn_WindowClose.Size = new System.Drawing.Size(26, 27);
-            this.Btn_WindowClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Btn_WindowClose.TabIndex = 3;
-            this.Btn_WindowClose.TabStop = false;
-            this.Btn_WindowClose.Click += new System.EventHandler(this.Btn_WindowClose_Click);
-            // 
-            // Pnl_Title
-            // 
-            this.Pnl_Title.Controls.Add(this.panel1);
-            this.Pnl_Title.Controls.Add(this.Pnl_Search);
-            this.Pnl_Title.Controls.Add(this.Pnl_TitleSplitter);
-            this.Pnl_Title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Pnl_Title.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_Title.Name = "Pnl_Title";
-            this.Pnl_Title.Size = new System.Drawing.Size(1255, 30);
-            this.Pnl_Title.TabIndex = 4;
-            this.Pnl_Title.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_Title_MouseMove);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.Btn_MiniWindow);
-            this.panel1.Controls.Add(this.Btn_WindowClose);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1174, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(81, 29);
-            this.panel1.TabIndex = 3;
-            // 
-            // Pnl_Search
-            // 
-            this.Pnl_Search.Controls.Add(this.label1);
-            this.Pnl_Search.Controls.Add(this.label2);
-            this.Pnl_Search.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Pnl_Search.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_Search.Name = "Pnl_Search";
-            this.Pnl_Search.Size = new System.Drawing.Size(505, 29);
-            this.Pnl_Search.TabIndex = 2;
-            // 
-            // Pnl_TitleSplitter
-            // 
-            this.Pnl_TitleSplitter.BackColor = System.Drawing.Color.Silver;
-            this.Pnl_TitleSplitter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Pnl_TitleSplitter.Location = new System.Drawing.Point(0, 29);
-            this.Pnl_TitleSplitter.Name = "Pnl_TitleSplitter";
-            this.Pnl_TitleSplitter.Size = new System.Drawing.Size(1255, 1);
-            this.Pnl_TitleSplitter.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GoodGameDB.Properties.Resources.GGDB_Icon_w;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.panel2.Controls.Add(this.Pnl_Logo_Split);
-            this.panel2.Controls.Add(this.Btn_Settings);
-            this.panel2.Controls.Add(this.Btn_Stats);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.Btn_Add);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 30);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(45, 875);
-            this.panel2.TabIndex = 5;
-            // 
-            // Pnl_Logo_Split
-            // 
-            this.Pnl_Logo_Split.BackColor = System.Drawing.Color.DimGray;
-            this.Pnl_Logo_Split.Location = new System.Drawing.Point(2, 49);
-            this.Pnl_Logo_Split.Name = "Pnl_Logo_Split";
-            this.Pnl_Logo_Split.Size = new System.Drawing.Size(45, 1);
-            this.Pnl_Logo_Split.TabIndex = 6;
-            // 
-            // Btn_Settings
-            // 
-            this.Btn_Settings.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Settings.FlatAppearance.BorderSize = 0;
-            this.Btn_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Settings.Image = global::GoodGameDB.Properties.Resources.settings_white;
-            this.Btn_Settings.Location = new System.Drawing.Point(0, 168);
-            this.Btn_Settings.Name = "Btn_Settings";
-            this.Btn_Settings.Size = new System.Drawing.Size(45, 50);
-            this.Btn_Settings.TabIndex = 5;
-            this.Btn_Settings.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Stats
-            // 
-            this.Btn_Stats.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Stats.FlatAppearance.BorderSize = 0;
-            this.Btn_Stats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Stats.Image = global::GoodGameDB.Properties.Resources.stats_white;
-            this.Btn_Stats.Location = new System.Drawing.Point(0, 112);
-            this.Btn_Stats.Name = "Btn_Stats";
-            this.Btn_Stats.Size = new System.Drawing.Size(45, 50);
-            this.Btn_Stats.TabIndex = 4;
-            this.Btn_Stats.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Add
-            // 
-            this.Btn_Add.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Add.FlatAppearance.BorderSize = 0;
-            this.Btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Add.Image = global::GoodGameDB.Properties.Resources.add_small_white;
-            this.Btn_Add.Location = new System.Drawing.Point(0, 56);
-            this.Btn_Add.Name = "Btn_Add";
-            this.Btn_Add.Size = new System.Drawing.Size(45, 50);
-            this.Btn_Add.TabIndex = 3;
-            this.Btn_Add.UseVisualStyleBackColor = false;
-            this.Btn_Add.Click += new System.EventHandler(this.Btn_Add_Click);
-            // 
-            // Pnl_SideContent
-            // 
-            this.Pnl_SideContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.Pnl_SideContent.Controls.Add(this.Pnl_HideScore);
-            this.Pnl_SideContent.Controls.Add(this.label10);
-            this.Pnl_SideContent.Controls.Add(this.label13);
-            this.Pnl_SideContent.Controls.Add(this.label3);
-            this.Pnl_SideContent.Controls.Add(this.Input_Game);
-            this.Pnl_SideContent.Controls.Add(this.Pnl_NavSplitter);
-            this.Pnl_SideContent.Controls.Add(this.Pnl_GameInfo);
-            this.Pnl_SideContent.Controls.Add(this.Pnl_Score);
-            this.Pnl_SideContent.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Pnl_SideContent.Location = new System.Drawing.Point(45, 30);
-            this.Pnl_SideContent.Name = "Pnl_SideContent";
-            this.Pnl_SideContent.Size = new System.Drawing.Size(426, 875);
-            this.Pnl_SideContent.TabIndex = 6;
-            this.Pnl_SideContent.Visible = false;
-            this.Pnl_SideContent.VisibleChanged += new System.EventHandler(this.Pnl_SideContent_VisibleChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.label10.Location = new System.Drawing.Point(13, 18);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(176, 16);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Playthrough Basic Data";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.label13.Location = new System.Drawing.Point(13, 324);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(153, 16);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "Playthrough Scoring";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(25, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Game";
-            // 
-            // Input_Game
-            // 
-            this.Input_Game.BackColor = System.Drawing.Color.White;
-            this.Input_Game.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Input_Game.Location = new System.Drawing.Point(25, 69);
-            this.Input_Game.Name = "Input_Game";
-            this.Input_Game.Size = new System.Drawing.Size(206, 23);
-            this.Input_Game.TabIndex = 1;
-            this.Input_Game.Enter += new System.EventHandler(this.Input_Game_Enter);
-            this.Input_Game.Leave += new System.EventHandler(this.Input_Game_Leave);
-            // 
-            // Pnl_NavSplitter
-            // 
-            this.Pnl_NavSplitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.Pnl_NavSplitter.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Pnl_NavSplitter.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_NavSplitter.Name = "Pnl_NavSplitter";
-            this.Pnl_NavSplitter.Size = new System.Drawing.Size(5, 875);
-            this.Pnl_NavSplitter.TabIndex = 0;
-            // 
-            // Pnl_GameInfo
-            // 
-            this.Pnl_GameInfo.BackColor = System.Drawing.Color.Transparent;
-            this.Pnl_GameInfo.Controls.Add(this.Input_Note);
-            this.Pnl_GameInfo.Controls.Add(this.Pnl_GameInfoBackgroundSplitter);
-            this.Pnl_GameInfo.Controls.Add(this.chkReplay);
-            this.Pnl_GameInfo.Controls.Add(this.label4);
-            this.Pnl_GameInfo.Controls.Add(this.Input_Location);
-            this.Pnl_GameInfo.Controls.Add(this.label6);
-            this.Pnl_GameInfo.Controls.Add(this.label5);
-            this.Pnl_GameInfo.Controls.Add(this.Input_Day);
-            this.Pnl_GameInfo.Controls.Add(this.Input_Year);
-            this.Pnl_GameInfo.Controls.Add(this.Input_Month);
-            this.Pnl_GameInfo.Location = new System.Drawing.Point(2, 37);
-            this.Pnl_GameInfo.Name = "Pnl_GameInfo";
-            this.Pnl_GameInfo.Size = new System.Drawing.Size(423, 274);
-            this.Pnl_GameInfo.TabIndex = 3;
-            // 
-            // Input_Note
-            // 
-            this.Input_Note.Location = new System.Drawing.Point(23, 167);
-            this.Input_Note.Name = "Input_Note";
-            this.Input_Note.Size = new System.Drawing.Size(377, 66);
-            this.Input_Note.TabIndex = 6;
-            this.Input_Note.Text = "";
-            this.Input_Note.Enter += new System.EventHandler(this.Input_Note_Enter_1);
-            this.Input_Note.Leave += new System.EventHandler(this.Input_Note_Leave_1);
-            // 
-            // Pnl_GameInfoBackgroundSplitter
-            // 
-            this.Pnl_GameInfoBackgroundSplitter.BackColor = System.Drawing.Color.DimGray;
-            this.Pnl_GameInfoBackgroundSplitter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Pnl_GameInfoBackgroundSplitter.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_GameInfoBackgroundSplitter.Name = "Pnl_GameInfoBackgroundSplitter";
-            this.Pnl_GameInfoBackgroundSplitter.Size = new System.Drawing.Size(423, 2);
-            this.Pnl_GameInfoBackgroundSplitter.TabIndex = 0;
-            // 
-            // chkReplay
-            // 
-            this.chkReplay.AutoSize = true;
-            this.chkReplay.BackColor = System.Drawing.Color.Transparent;
-            this.chkReplay.ForeColor = System.Drawing.Color.Silver;
-            this.chkReplay.Location = new System.Drawing.Point(26, 239);
-            this.chkReplay.Name = "chkReplay";
-            this.chkReplay.Size = new System.Drawing.Size(69, 20);
-            this.chkReplay.TabIndex = 49;
-            this.chkReplay.Text = "Replay";
-            this.chkReplay.UseVisualStyleBackColor = false;
-            this.chkReplay.CheckedChanged += new System.EventHandler(this.chkReplay_CheckedChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(235, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Location";
-            // 
-            // Input_Location
-            // 
-            this.Input_Location.BackColor = System.Drawing.Color.White;
-            this.Input_Location.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Input_Location.Location = new System.Drawing.Point(235, 32);
-            this.Input_Location.Name = "Input_Location";
-            this.Input_Location.Size = new System.Drawing.Size(165, 23);
-            this.Input_Location.TabIndex = 2;
-            this.Input_Location.Enter += new System.EventHandler(this.Input_Location_Enter);
-            this.Input_Location.Leave += new System.EventHandler(this.Input_Location_Leave);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(25, 148);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 16);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Note";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(24, 83);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Date";
-            // 
-            // Input_Day
-            // 
-            this.Input_Day.BackColor = System.Drawing.Color.White;
-            this.Input_Day.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Input_Day.Location = new System.Drawing.Point(23, 102);
-            this.Input_Day.Name = "Input_Day";
-            this.Input_Day.Size = new System.Drawing.Size(90, 23);
-            this.Input_Day.TabIndex = 3;
-            this.Input_Day.Enter += new System.EventHandler(this.Input_Day_Enter);
-            this.Input_Day.Leave += new System.EventHandler(this.Input_Day_Leave);
-            // 
-            // Input_Year
-            // 
-            this.Input_Year.BackColor = System.Drawing.Color.White;
-            this.Input_Year.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Input_Year.Location = new System.Drawing.Point(235, 102);
-            this.Input_Year.Name = "Input_Year";
-            this.Input_Year.Size = new System.Drawing.Size(164, 23);
-            this.Input_Year.TabIndex = 5;
-            this.Input_Year.Enter += new System.EventHandler(this.Input_Year_Enter);
-            this.Input_Year.Leave += new System.EventHandler(this.Input_Year_Leave);
-            // 
-            // Input_Month
-            // 
-            this.Input_Month.BackColor = System.Drawing.Color.White;
-            this.Input_Month.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Input_Month.Location = new System.Drawing.Point(119, 102);
-            this.Input_Month.Name = "Input_Month";
-            this.Input_Month.Size = new System.Drawing.Size(110, 23);
-            this.Input_Month.TabIndex = 4;
-            this.Input_Month.Enter += new System.EventHandler(this.Input_Month_Enter);
-            this.Input_Month.Leave += new System.EventHandler(this.Input_Month_Leave);
-            // 
             // Pnl_Score
             // 
+            this.Pnl_Score.Controls.Add(this.BtnClear);
+            this.Pnl_Score.Controls.Add(this.BtnCommit);
+            this.Pnl_Score.Controls.Add(this.BtnHide);
             this.Pnl_Score.Controls.Add(this.Pnl_ScoreSplitter);
             this.Pnl_Score.Controls.Add(this.Lbl_UserInfo);
             this.Pnl_Score.Controls.Add(this.Pnl_SumScore);
-            this.Pnl_Score.Controls.Add(this.button4);
             this.Pnl_Score.Controls.Add(this.Lbl_SumScore);
             this.Pnl_Score.Controls.Add(this.label19);
-            this.Pnl_Score.Controls.Add(this.BtnCommit);
             this.Pnl_Score.Controls.Add(this.label15);
             this.Pnl_Score.Controls.Add(this.Rate_Impression);
             this.Pnl_Score.Controls.Add(this.chkImpression);
@@ -576,10 +250,43 @@
             this.Pnl_Score.Controls.Add(this.label8);
             this.Pnl_Score.Controls.Add(this.Rate_Gameplay);
             this.Pnl_Score.Controls.Add(this.chkGameplay);
-            this.Pnl_Score.Location = new System.Drawing.Point(5, 343);
+            this.Pnl_Score.Location = new System.Drawing.Point(6, 346);
             this.Pnl_Score.Name = "Pnl_Score";
-            this.Pnl_Score.Size = new System.Drawing.Size(420, 508);
+            this.Pnl_Score.Size = new System.Drawing.Size(422, 529);
             this.Pnl_Score.TabIndex = 30;
+            // 
+            // BtnClear
+            // 
+            this.BtnClear.Image = global::GoodGameDB.Properties.Resources.clear_white2;
+            this.BtnClear.Location = new System.Drawing.Point(60, 485);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(30, 30);
+            this.BtnClear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnClear.TabIndex = 56;
+            this.BtnClear.TabStop = false;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
+            // BtnCommit
+            // 
+            this.BtnCommit.Image = global::GoodGameDB.Properties.Resources.save;
+            this.BtnCommit.Location = new System.Drawing.Point(97, 485);
+            this.BtnCommit.Name = "BtnCommit";
+            this.BtnCommit.Size = new System.Drawing.Size(30, 30);
+            this.BtnCommit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnCommit.TabIndex = 55;
+            this.BtnCommit.TabStop = false;
+            this.BtnCommit.Click += new System.EventHandler(this.BtnCommit_Click_1);
+            // 
+            // BtnHide
+            // 
+            this.BtnHide.Image = global::GoodGameDB.Properties.Resources.hide_popup;
+            this.BtnHide.Location = new System.Drawing.Point(12, 485);
+            this.BtnHide.Name = "BtnHide";
+            this.BtnHide.Size = new System.Drawing.Size(30, 30);
+            this.BtnHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnHide.TabIndex = 54;
+            this.BtnHide.TabStop = false;
+            this.BtnHide.Click += new System.EventHandler(this.BtnHide_Click);
             // 
             // Pnl_ScoreSplitter
             // 
@@ -587,14 +294,14 @@
             this.Pnl_ScoreSplitter.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_ScoreSplitter.Location = new System.Drawing.Point(0, 0);
             this.Pnl_ScoreSplitter.Name = "Pnl_ScoreSplitter";
-            this.Pnl_ScoreSplitter.Size = new System.Drawing.Size(420, 2);
+            this.Pnl_ScoreSplitter.Size = new System.Drawing.Size(422, 2);
             this.Pnl_ScoreSplitter.TabIndex = 53;
             // 
             // Lbl_UserInfo
             // 
             this.Lbl_UserInfo.AutoSize = true;
             this.Lbl_UserInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.Lbl_UserInfo.Location = new System.Drawing.Point(15, 437);
+            this.Lbl_UserInfo.Location = new System.Drawing.Point(14, 455);
             this.Lbl_UserInfo.Name = "Lbl_UserInfo";
             this.Lbl_UserInfo.Size = new System.Drawing.Size(0, 16);
             this.Lbl_UserInfo.TabIndex = 50;
@@ -607,17 +314,6 @@
             this.Pnl_SumScore.Size = new System.Drawing.Size(372, 1);
             this.Pnl_SumScore.TabIndex = 52;
             this.Pnl_SumScore.Visible = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DarkGray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(94, 467);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 25);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // Lbl_SumScore
             // 
@@ -641,18 +337,6 @@
             this.label19.Size = new System.Drawing.Size(46, 16);
             this.label19.TabIndex = 50;
             this.label19.Text = "Total:";
-            // 
-            // BtnCommit
-            // 
-            this.BtnCommit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.BtnCommit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCommit.Location = new System.Drawing.Point(13, 467);
-            this.BtnCommit.Name = "BtnCommit";
-            this.BtnCommit.Size = new System.Drawing.Size(75, 25);
-            this.BtnCommit.TabIndex = 10;
-            this.BtnCommit.Text = "Save";
-            this.BtnCommit.UseVisualStyleBackColor = false;
-            this.BtnCommit.Click += new System.EventHandler(this.BtnCommit_Click);
             // 
             // label15
             // 
@@ -1140,6 +824,337 @@
             this.chkGameplay.TabIndex = 25;
             this.chkGameplay.UseVisualStyleBackColor = false;
             // 
+            // Btn_MiniWindow
+            // 
+            this.Btn_MiniWindow.Image = global::GoodGameDB.Properties.Resources.window_mini;
+            this.Btn_MiniWindow.Location = new System.Drawing.Point(17, 1);
+            this.Btn_MiniWindow.Name = "Btn_MiniWindow";
+            this.Btn_MiniWindow.Size = new System.Drawing.Size(26, 27);
+            this.Btn_MiniWindow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_MiniWindow.TabIndex = 4;
+            this.Btn_MiniWindow.TabStop = false;
+            this.Btn_MiniWindow.Click += new System.EventHandler(this.Btn_MiniWindow_Click);
+            // 
+            // Btn_WindowClose
+            // 
+            this.Btn_WindowClose.Image = global::GoodGameDB.Properties.Resources.window_close1;
+            this.Btn_WindowClose.Location = new System.Drawing.Point(47, 1);
+            this.Btn_WindowClose.Name = "Btn_WindowClose";
+            this.Btn_WindowClose.Size = new System.Drawing.Size(26, 27);
+            this.Btn_WindowClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_WindowClose.TabIndex = 3;
+            this.Btn_WindowClose.TabStop = false;
+            this.Btn_WindowClose.Click += new System.EventHandler(this.Btn_WindowClose_Click);
+            // 
+            // Pnl_Title
+            // 
+            this.Pnl_Title.Controls.Add(this.panel1);
+            this.Pnl_Title.Controls.Add(this.Pnl_Search);
+            this.Pnl_Title.Controls.Add(this.Pnl_TitleSplitter);
+            this.Pnl_Title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_Title.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_Title.Name = "Pnl_Title";
+            this.Pnl_Title.Size = new System.Drawing.Size(1255, 30);
+            this.Pnl_Title.TabIndex = 4;
+            this.Pnl_Title.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pnl_Title_MouseMove);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.Btn_MiniWindow);
+            this.panel1.Controls.Add(this.Btn_WindowClose);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(1174, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(81, 29);
+            this.panel1.TabIndex = 3;
+            // 
+            // Pnl_Search
+            // 
+            this.Pnl_Search.Controls.Add(this.label1);
+            this.Pnl_Search.Controls.Add(this.label2);
+            this.Pnl_Search.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Pnl_Search.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_Search.Name = "Pnl_Search";
+            this.Pnl_Search.Size = new System.Drawing.Size(505, 29);
+            this.Pnl_Search.TabIndex = 2;
+            // 
+            // Pnl_TitleSplitter
+            // 
+            this.Pnl_TitleSplitter.BackColor = System.Drawing.Color.Silver;
+            this.Pnl_TitleSplitter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Pnl_TitleSplitter.Location = new System.Drawing.Point(0, 29);
+            this.Pnl_TitleSplitter.Name = "Pnl_TitleSplitter";
+            this.Pnl_TitleSplitter.Size = new System.Drawing.Size(1255, 1);
+            this.Pnl_TitleSplitter.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GoodGameDB.Properties.Resources.GGDB_Icon_w;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panel2.Controls.Add(this.Pnl_Logo_Split);
+            this.panel2.Controls.Add(this.Btn_Settings);
+            this.panel2.Controls.Add(this.Btn_Stats);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.Btn_Add);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 30);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(45, 875);
+            this.panel2.TabIndex = 5;
+            // 
+            // Pnl_Logo_Split
+            // 
+            this.Pnl_Logo_Split.BackColor = System.Drawing.Color.DimGray;
+            this.Pnl_Logo_Split.Location = new System.Drawing.Point(2, 49);
+            this.Pnl_Logo_Split.Name = "Pnl_Logo_Split";
+            this.Pnl_Logo_Split.Size = new System.Drawing.Size(45, 1);
+            this.Pnl_Logo_Split.TabIndex = 6;
+            // 
+            // Btn_Settings
+            // 
+            this.Btn_Settings.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Settings.FlatAppearance.BorderSize = 0;
+            this.Btn_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Settings.Image = global::GoodGameDB.Properties.Resources.settings_white;
+            this.Btn_Settings.Location = new System.Drawing.Point(0, 168);
+            this.Btn_Settings.Name = "Btn_Settings";
+            this.Btn_Settings.Size = new System.Drawing.Size(45, 50);
+            this.Btn_Settings.TabIndex = 5;
+            this.Btn_Settings.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Stats
+            // 
+            this.Btn_Stats.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Stats.FlatAppearance.BorderSize = 0;
+            this.Btn_Stats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Stats.Image = global::GoodGameDB.Properties.Resources.stats_white;
+            this.Btn_Stats.Location = new System.Drawing.Point(0, 112);
+            this.Btn_Stats.Name = "Btn_Stats";
+            this.Btn_Stats.Size = new System.Drawing.Size(45, 50);
+            this.Btn_Stats.TabIndex = 4;
+            this.Btn_Stats.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Add
+            // 
+            this.Btn_Add.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Add.FlatAppearance.BorderSize = 0;
+            this.Btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Add.Image = global::GoodGameDB.Properties.Resources.add_small_white;
+            this.Btn_Add.Location = new System.Drawing.Point(0, 56);
+            this.Btn_Add.Name = "Btn_Add";
+            this.Btn_Add.Size = new System.Drawing.Size(45, 50);
+            this.Btn_Add.TabIndex = 3;
+            this.Btn_Add.UseVisualStyleBackColor = false;
+            this.Btn_Add.Click += new System.EventHandler(this.Btn_Add_Click);
+            // 
+            // Pnl_SideContent
+            // 
+            this.Pnl_SideContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.Pnl_SideContent.Controls.Add(this.Pnl_HideScore);
+            this.Pnl_SideContent.Controls.Add(this.Pnl_Score);
+            this.Pnl_SideContent.Controls.Add(this.label10);
+            this.Pnl_SideContent.Controls.Add(this.label13);
+            this.Pnl_SideContent.Controls.Add(this.label3);
+            this.Pnl_SideContent.Controls.Add(this.Input_Game);
+            this.Pnl_SideContent.Controls.Add(this.Pnl_NavSplitter);
+            this.Pnl_SideContent.Controls.Add(this.Pnl_GameInfo);
+            this.Pnl_SideContent.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Pnl_SideContent.Location = new System.Drawing.Point(45, 30);
+            this.Pnl_SideContent.Name = "Pnl_SideContent";
+            this.Pnl_SideContent.Size = new System.Drawing.Size(425, 875);
+            this.Pnl_SideContent.TabIndex = 6;
+            this.Pnl_SideContent.Visible = false;
+            this.Pnl_SideContent.VisibleChanged += new System.EventHandler(this.Pnl_SideContent_VisibleChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.label10.Location = new System.Drawing.Point(13, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(176, 16);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Playthrough Basic Data";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.label13.Location = new System.Drawing.Point(13, 324);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(153, 16);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Playthrough Scoring";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(25, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 16);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Game";
+            // 
+            // Input_Game
+            // 
+            this.Input_Game.BackColor = System.Drawing.Color.White;
+            this.Input_Game.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Input_Game.Location = new System.Drawing.Point(25, 69);
+            this.Input_Game.Name = "Input_Game";
+            this.Input_Game.Size = new System.Drawing.Size(206, 23);
+            this.Input_Game.TabIndex = 1;
+            this.Input_Game.Enter += new System.EventHandler(this.Input_Game_Enter);
+            this.Input_Game.Leave += new System.EventHandler(this.Input_Game_Leave);
+            // 
+            // Pnl_NavSplitter
+            // 
+            this.Pnl_NavSplitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.Pnl_NavSplitter.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Pnl_NavSplitter.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_NavSplitter.Name = "Pnl_NavSplitter";
+            this.Pnl_NavSplitter.Size = new System.Drawing.Size(5, 875);
+            this.Pnl_NavSplitter.TabIndex = 0;
+            // 
+            // Pnl_GameInfo
+            // 
+            this.Pnl_GameInfo.BackColor = System.Drawing.Color.Transparent;
+            this.Pnl_GameInfo.Controls.Add(this.Input_Note);
+            this.Pnl_GameInfo.Controls.Add(this.Pnl_GameInfoBackgroundSplitter);
+            this.Pnl_GameInfo.Controls.Add(this.chkReplay);
+            this.Pnl_GameInfo.Controls.Add(this.label4);
+            this.Pnl_GameInfo.Controls.Add(this.Input_Location);
+            this.Pnl_GameInfo.Controls.Add(this.label6);
+            this.Pnl_GameInfo.Controls.Add(this.label5);
+            this.Pnl_GameInfo.Controls.Add(this.Input_Day);
+            this.Pnl_GameInfo.Controls.Add(this.Input_Year);
+            this.Pnl_GameInfo.Controls.Add(this.Input_Month);
+            this.Pnl_GameInfo.Location = new System.Drawing.Point(2, 37);
+            this.Pnl_GameInfo.Name = "Pnl_GameInfo";
+            this.Pnl_GameInfo.Size = new System.Drawing.Size(423, 274);
+            this.Pnl_GameInfo.TabIndex = 3;
+            // 
+            // Input_Note
+            // 
+            this.Input_Note.Location = new System.Drawing.Point(23, 167);
+            this.Input_Note.Name = "Input_Note";
+            this.Input_Note.Size = new System.Drawing.Size(377, 66);
+            this.Input_Note.TabIndex = 6;
+            this.Input_Note.Text = "";
+            this.Input_Note.Enter += new System.EventHandler(this.Input_Note_Enter_1);
+            this.Input_Note.Leave += new System.EventHandler(this.Input_Note_Leave_1);
+            // 
+            // Pnl_GameInfoBackgroundSplitter
+            // 
+            this.Pnl_GameInfoBackgroundSplitter.BackColor = System.Drawing.Color.DimGray;
+            this.Pnl_GameInfoBackgroundSplitter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_GameInfoBackgroundSplitter.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_GameInfoBackgroundSplitter.Name = "Pnl_GameInfoBackgroundSplitter";
+            this.Pnl_GameInfoBackgroundSplitter.Size = new System.Drawing.Size(423, 2);
+            this.Pnl_GameInfoBackgroundSplitter.TabIndex = 0;
+            // 
+            // chkReplay
+            // 
+            this.chkReplay.AutoSize = true;
+            this.chkReplay.BackColor = System.Drawing.Color.Transparent;
+            this.chkReplay.ForeColor = System.Drawing.Color.Silver;
+            this.chkReplay.Location = new System.Drawing.Point(26, 239);
+            this.chkReplay.Name = "chkReplay";
+            this.chkReplay.Size = new System.Drawing.Size(69, 20);
+            this.chkReplay.TabIndex = 49;
+            this.chkReplay.Text = "Replay";
+            this.chkReplay.UseVisualStyleBackColor = false;
+            this.chkReplay.CheckedChanged += new System.EventHandler(this.chkReplay_CheckedChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(235, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 16);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Location";
+            // 
+            // Input_Location
+            // 
+            this.Input_Location.BackColor = System.Drawing.Color.White;
+            this.Input_Location.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Input_Location.Location = new System.Drawing.Point(235, 32);
+            this.Input_Location.Name = "Input_Location";
+            this.Input_Location.Size = new System.Drawing.Size(165, 23);
+            this.Input_Location.TabIndex = 2;
+            this.Input_Location.Enter += new System.EventHandler(this.Input_Location_Enter);
+            this.Input_Location.Leave += new System.EventHandler(this.Input_Location_Leave);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(25, 148);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 16);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Note";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(24, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Date";
+            // 
+            // Input_Day
+            // 
+            this.Input_Day.BackColor = System.Drawing.Color.White;
+            this.Input_Day.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Input_Day.Location = new System.Drawing.Point(23, 102);
+            this.Input_Day.Name = "Input_Day";
+            this.Input_Day.Size = new System.Drawing.Size(90, 23);
+            this.Input_Day.TabIndex = 3;
+            this.Input_Day.Enter += new System.EventHandler(this.Input_Day_Enter);
+            this.Input_Day.Leave += new System.EventHandler(this.Input_Day_Leave);
+            // 
+            // Input_Year
+            // 
+            this.Input_Year.BackColor = System.Drawing.Color.White;
+            this.Input_Year.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Input_Year.Location = new System.Drawing.Point(235, 102);
+            this.Input_Year.Name = "Input_Year";
+            this.Input_Year.Size = new System.Drawing.Size(164, 23);
+            this.Input_Year.TabIndex = 5;
+            this.Input_Year.Enter += new System.EventHandler(this.Input_Year_Enter);
+            this.Input_Year.Leave += new System.EventHandler(this.Input_Year_Leave);
+            // 
+            // Input_Month
+            // 
+            this.Input_Month.BackColor = System.Drawing.Color.White;
+            this.Input_Month.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Input_Month.Location = new System.Drawing.Point(119, 102);
+            this.Input_Month.Name = "Input_Month";
+            this.Input_Month.Size = new System.Drawing.Size(110, 23);
+            this.Input_Month.TabIndex = 4;
+            this.Input_Month.Enter += new System.EventHandler(this.Input_Month_Enter);
+            this.Input_Month.Leave += new System.EventHandler(this.Input_Month_Leave);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1158,6 +1173,20 @@
             this.Pnl_Content.ResumeLayout(false);
             this.Pnl_HideScore.ResumeLayout(false);
             this.Pnl_HideScore.PerformLayout();
+            this.Pnl_Score.ResumeLayout(false);
+            this.Pnl_Score.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnClear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCommit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnHide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rate_Impression)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rate_Balance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rate_Pacing)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rate_Content)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rate_Sound)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rate_Quality)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rate_Narrative)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rate_Presentation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rate_Gameplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_MiniWindow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_WindowClose)).EndInit();
             this.Pnl_Title.ResumeLayout(false);
@@ -1170,17 +1199,6 @@
             this.Pnl_SideContent.PerformLayout();
             this.Pnl_GameInfo.ResumeLayout(false);
             this.Pnl_GameInfo.PerformLayout();
-            this.Pnl_Score.ResumeLayout(false);
-            this.Pnl_Score.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Rate_Impression)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Rate_Balance)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Rate_Pacing)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Rate_Content)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Rate_Sound)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Rate_Quality)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Rate_Narrative)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Rate_Presentation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Rate_Gameplay)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1248,8 +1266,6 @@
         private Label label19;
         private Label Lbl_SumScore;
         private Panel Pnl_SumScore;
-        private Button button4;
-        private Button BtnCommit;
         private CheckBox chkReplay;
         private Panel Pnl_GameInfo;
         private Panel Pnl_GameInfoBackgroundSplitter;
@@ -1258,5 +1274,8 @@
         private Label label9;
         private Label Lbl_UserInfo;
         private RichTextBox Input_Note;
+        private PictureBox BtnHide;
+        private PictureBox BtnCommit;
+        private PictureBox BtnClear;
     }
 }

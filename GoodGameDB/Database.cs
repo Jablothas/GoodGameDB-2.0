@@ -20,16 +20,8 @@ namespace GoodGameDB
         DataTable table;
         Panel latestActivePnl = null;
         public static Panel InfoPanel;
-
         public static DataRow CurrentGame;
-
-        // cache files for edit mode
-        //public static string game_name, location, date_day,
-        //                     date_month, date_year, note;
-        //public static bool replay;                        
-        //public static int tmp_gameplay, tmp_presentation, tmp_narrative,
-        //                  tmp_quality, tmp_sound, tmp_content,
-        //                  tmp_pacing, tmp_balance, tmp_impression;
+        bool Searching = false;
 
 
         public Database()
@@ -43,12 +35,27 @@ namespace GoodGameDB
 
         private void LoadData()
         {
-            query = "SELECT id, games.name, date, location, note, score, replay, " +
+            if (Searching == true)
+            {
+                query = "SELECT id, games.name, date, location, note, score, replay, " +
+                "s_id, score_values.name, gameplay, presentation, narrative, quality, sound, content, pacing, balance, impression, total, " +
+                "INSTR(UPPER(games.name), UPPER('" + txtSearch.Text + "')) sw " +
+                "FROM games " +
+                "INNER JOIN score_values " +
+                "ON games.score = score_values.s_id " +
+                "WHERE sw > 0";
+            }
+
+            if (Searching == false)
+            {
+                query = "SELECT id, games.name, date, location, note, score, replay, " +
                 "s_id, score_values.name, gameplay, presentation, narrative, quality, sound, content, pacing, balance, impression, total " +
-                "FROM games " + 
+                "FROM games " +
                 "INNER JOIN score_values " +
                 "ON games.score = score_values.s_id " +
                 "ORDER BY date ASC";
+
+            }
             table = ConnectDB.CreateDataTable(query);
 
             // Create for each row in database a panel and fills with content
@@ -121,7 +128,7 @@ namespace GoodGameDB
                 Pnl_Background.Controls.Add(Note);
             }
 
-            ConnectDB.Close();
+                ConnectDB.Close();           
         }
 
         public void MouseEnterOnDatabase(object sender, EventArgs e)
@@ -186,17 +193,17 @@ namespace GoodGameDB
 
                         Lbl_Title.Text = line["name"].ToString();
 
-                        ScoreSystem.Draw(15, 25, "Gameplay", Convert.ToInt32(line["gameplay"]), Pnl_InfoData);
-                        ScoreSystem.Draw(15, 50, "Presentation", Convert.ToInt32(line["presentation"]), Pnl_InfoData);
-                        ScoreSystem.Draw(15, 75, "Narrative", Convert.ToInt32(line["narrative"]), Pnl_InfoData);
-                        ScoreSystem.Draw(15, 100, "Quality", Convert.ToInt32(line["quality"]), Pnl_InfoData);
-                        ScoreSystem.Draw(15, 125, "Sound", Convert.ToInt32(line["sound"]), Pnl_InfoData);
-                        ScoreSystem.Draw(15, 150, "Content", Convert.ToInt32(line["content"]), Pnl_InfoData);
-                        ScoreSystem.Draw(15, 175, "Pacing", Convert.ToInt32(line["pacing"]), Pnl_InfoData);
-                        ScoreSystem.Draw(15, 200, "Balance", Convert.ToInt32(line["balance"]), Pnl_InfoData);
-                        ScoreSystem.Draw(15, 225, "Impression", Convert.ToInt32(line["impression"]), Pnl_InfoData);
+                        ScoreSystem.Draw(20, 25, "Gameplay", Convert.ToInt32(line["gameplay"]), Pnl_InfoData);
+                        ScoreSystem.Draw(20, 50, "Presentation", Convert.ToInt32(line["presentation"]), Pnl_InfoData);
+                        ScoreSystem.Draw(20, 75, "Narrative", Convert.ToInt32(line["narrative"]), Pnl_InfoData);
+                        ScoreSystem.Draw(20, 100, "Quality", Convert.ToInt32(line["quality"]), Pnl_InfoData);
+                        ScoreSystem.Draw(20, 125, "Sound", Convert.ToInt32(line["sound"]), Pnl_InfoData);
+                        ScoreSystem.Draw(20, 150, "Content", Convert.ToInt32(line["content"]), Pnl_InfoData);
+                        ScoreSystem.Draw(20, 175, "Pacing", Convert.ToInt32(line["pacing"]), Pnl_InfoData);
+                        ScoreSystem.Draw(20, 200, "Balance", Convert.ToInt32(line["balance"]), Pnl_InfoData);
+                        ScoreSystem.Draw(20, 225, "Impression", Convert.ToInt32(line["impression"]), Pnl_InfoData);
 
-                        ScoreSystem.Create(200, 250, Convert.ToInt32(line["total"]), Convert.ToBoolean(line["replay"]), Pnl_InfoData);
+                        
 
                         if (line["note"].ToString() != "")
                         {
@@ -204,7 +211,7 @@ namespace GoodGameDB
                         }
                         else
                         {
-                            Lbl_Note.Text = "empty";
+                            Lbl_Note.Text = "-";
                         }
                         
 
@@ -238,6 +245,11 @@ namespace GoodGameDB
             }
         }
 
+        private void Btn_Delete_Click(object sender, EventArgs e)
+        {
+            Pnl_ConfirmDelete.Visible = true;
+        }
+
         private void Btn_Hide_Click(object sender, EventArgs e)
         {
             Pnl_Info.Visible = false;
@@ -269,6 +281,39 @@ namespace GoodGameDB
             LoadData();
             Pnl_Data.Visible = true;
             
+        }
+
+        private void Btn_ConfirmDelete_Click(object sender, EventArgs e)
+        {
+            string query = "DELETE FROM games WHERE id = " + CurrentGame[0];
+            ConnectDB.Delete(query);
+            Pnl_ConfirmDelete.Visible = false;
+        }
+
+        private void Btn_AbortDelete_Click(object sender, EventArgs e)
+        {
+            Pnl_ConfirmDelete.Visible = false;
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text != "")
+            {
+                Searching = true;
+                Pnl_Data.Visible = false;
+                Pnl_Data.Controls.Clear();
+                LoadData();
+                Pnl_Data.Visible = true;
+            }
+
+            if (txtSearch.Text == "")
+            {
+                Searching = false;
+                Pnl_Data.Visible = false;
+                Pnl_Data.Controls.Clear();
+                LoadData();
+                Pnl_Data.Visible = true;
+            }
         }
     }
 }

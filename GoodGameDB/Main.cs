@@ -11,6 +11,11 @@ using System.IO;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
+// TODO: 
+// -> Reset Button on new entry need to be coded
+// -> Stat Page
+// -> Settings
+
 namespace GoodGameDB
 {
     public partial class Main : Form
@@ -102,7 +107,7 @@ namespace GoodGameDB
             childForm.Show();
         }
 
-        private void BtnCommit_Click(object sender, EventArgs e)
+        private void BtnCommit_Click_1(object sender, EventArgs e)
         {
 
             DateComplete = Input_Year.Text + "-" + Input_Month.Text + "-" + Input_Day.Text;
@@ -266,6 +271,37 @@ namespace GoodGameDB
                 Pnl_SideContent.Visible = false;
                 Btn_Add.BackColor = Color.Transparent;
             }
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            Input_Game.Text = "";
+            Input_Location.Text = "";
+            Input_Day.Text = "";
+            Input_Month.Text = "";
+            Input_Year.Text = "";
+            Input_Note.Text = "";
+            chkReplay.Checked = false;
+            ScorePreviewGameplay.Update(1);
+            Rate_Gameplay.Value = 1;
+            ScorePreviewPresentation.Update(1);
+            Rate_Presentation.Value = 1;
+            ScorePreviewNarrative.Update(1);
+            Rate_Narrative.Value = 1;
+            ScorePreviewQuality.Update(1);
+            Rate_Quality.Value = 1;
+            ScorePreviewSound.Update(1);
+            Rate_Sound.Value = 1;
+            ScorePreviewContent.Update(1);
+            Rate_Content.Value = 1;
+            ScorePreviewPacing.Update(1);
+            Rate_Pacing.Value = 1;
+            ScorePreviewBalance.Update(1);
+            Rate_Balance.Value = 1;
+            ScorePreviewImpression.Update(1);
+            Rate_Impression.Value = 1;
+
+
         }
 
         private void CountSum()
@@ -557,6 +593,12 @@ namespace GoodGameDB
         private void Input_Note_Leave_1(object sender, EventArgs e)
         {
             Input_Note.BackColor = Color.White;
+        }
+
+        private void BtnHide_Click(object sender, EventArgs e)
+        {
+            Pnl_SideContent.Visible = false;
+            Btn_Add.BackColor = Color.Transparent;
         }
     }
 }

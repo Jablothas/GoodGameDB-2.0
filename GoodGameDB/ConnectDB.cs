@@ -31,6 +31,14 @@ namespace GoodGameDB
             InsertSQL.ExecuteNonQuery();
         }
 
+        public static void Delete(string query)
+        {
+            conn = new SQLiteConnection(@"Data source = data.db");
+            conn.Open();
+            SQLiteCommand InsertSQL = new SQLiteCommand(query, conn);
+            InsertSQL.ExecuteNonQuery();
+        }
+
         public static void Insert(string query)
         {
             conn = new SQLiteConnection(@"Data source = data.db");
