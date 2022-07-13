@@ -942,6 +942,7 @@
             this.Btn_Stats.Size = new System.Drawing.Size(45, 50);
             this.Btn_Stats.TabIndex = 4;
             this.Btn_Stats.UseVisualStyleBackColor = false;
+            this.Btn_Stats.Click += new System.EventHandler(this.Btn_Stats_Click);
             // 
             // Btn_Add
             // 

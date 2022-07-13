@@ -88,6 +88,7 @@ namespace GoodGameDB
             ScorePreviewImpression.Create(10, 260, "Impression", Pnl_Score);
 
             ScoreSum.SumCreate(335, 300, 19, Pnl_Score);
+            
         }
 
         public void OpenForm(Form childForm)
@@ -300,8 +301,6 @@ namespace GoodGameDB
             Rate_Balance.Value = 1;
             ScorePreviewImpression.Update(1);
             Rate_Impression.Value = 1;
-
-
         }
 
         private void CountSum()
@@ -599,6 +598,11 @@ namespace GoodGameDB
         {
             Pnl_SideContent.Visible = false;
             Btn_Add.BackColor = Color.Transparent;
+        }
+
+        private void Btn_Stats_Click(object sender, EventArgs e)
+        {
+            new Stats().Show();
         }
     }
 }
