@@ -10,7 +10,7 @@ namespace GoodGameDB
         string query = "";
         DataTable table;
         int year1, year2, year3, year4, year5;
-        int year1_count, year2_count, year3_count, year4_count, year5_count, total_count, tota_unique_count;
+        int year1_count, year2_count, year3_count, year4_count, year5_count, total_count, total_unique_count;
         int gold_count, silver_count, bronze_count;
         DateTime currentYear;
 
@@ -41,6 +41,11 @@ namespace GoodGameDB
 
             foreach (DataRow item in table.Rows)
             {
+                if (Convert.ToBoolean(item[6]) == false)
+                {
+                    total_unique_count++;
+                }
+                total_count++;
 
                 if (item[2].ToString().Contains(Convert.ToString(year1)))
                 {
@@ -84,6 +89,8 @@ namespace GoodGameDB
                 lbl_GoldTotal.Text = gold_count + " medals";
                 lbl_SilverTotal.Text = silver_count + " medals";
                 lbl_BronzeTotal.Text = bronze_count + " medals";
+                lbl_total.Text = total_count + " games finished (" + total_unique_count + " unique)";
+                
             }
         }
 

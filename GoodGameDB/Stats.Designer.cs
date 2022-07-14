@@ -57,7 +57,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_total = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_ClosePopUp)).BeginInit();
             this.Panel_BorderTop.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -377,22 +377,22 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightGray;
-            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.lbl_total);
             this.panel4.Location = new System.Drawing.Point(14, 230);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(488, 36);
             this.panel4.TabIndex = 16;
             // 
-            // label6
+            // lbl_total
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(14, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(206, 16);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "11 games finished (10 unique)";
+            this.lbl_total.AutoSize = true;
+            this.lbl_total.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_total.ForeColor = System.Drawing.Color.Black;
+            this.lbl_total.Location = new System.Drawing.Point(14, 9);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(206, 16);
+            this.lbl_total.TabIndex = 13;
+            this.lbl_total.Text = "11 games finished (10 unique)";
             // 
             // Stats
             // 
@@ -461,6 +461,6 @@
         private Label label12;
         private Label label3;
         private Panel panel4;
-        private Label label6;
+        private Label lbl_total;
     }
 }
