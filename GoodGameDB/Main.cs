@@ -52,6 +52,7 @@ namespace GoodGameDB
         int sBalance = 1;
         int sImpression = 1;
         int sTotal = 1;
+        string Day, Month, Year;
 
         // Datafields for Input
         bool ReplayStatus = false;
@@ -88,7 +89,18 @@ namespace GoodGameDB
             ScorePreviewImpression.Create(10, 260, "Impression", Pnl_Score);
 
             ScoreSum.SumCreate(335, 300, 19, Pnl_Score);
-            
+
+            string date_now;
+            date_now = DateTime.Now.ToShortDateString();
+            string[] datesplit;
+            datesplit = date_now.Split('.');
+            Year = datesplit[2];
+            Month = datesplit[1];
+            Day = datesplit[0];
+
+            Input_Day.Text = "" + Day;
+            Input_Month.Text = "" + Month;
+            Input_Year.Text = "" + Year;
         }
 
         public void OpenForm(Form childForm)
@@ -110,127 +122,135 @@ namespace GoodGameDB
 
         private void BtnCommit_Click_1(object sender, EventArgs e)
         {
-
-            DateComplete = Input_Year.Text + "-" + Input_Month.Text + "-" + Input_Day.Text;
-            Gametitle = Input_Game.Text;
-            sGameplay = Convert.ToInt32(Rate_Gameplay.Value);
-            sPresentation = Convert.ToInt32(Rate_Presentation.Value);
-            sNarrative = Convert.ToInt32(Rate_Narrative.Value);
-            sQuality = Convert.ToInt32(Rate_Quality.Value);
-            sSound = Convert.ToInt32(Rate_Sound.Value);
-            sContent = Convert.ToInt32(Rate_Content.Value);
-            sPacing = Convert.ToInt32(Rate_Pacing.Value);
-            sBalance = Convert.ToInt32(Rate_Balance.Value);
-            sImpression = Convert.ToInt32(Rate_Impression.Value);
-            sTotal = sGameplay + sPresentation + sNarrative + sQuality + sSound + sContent + sPacing + sBalance + sImpression + 10;
-
-            if (EditMode == false)
+            if (Input_Game.Text == "" || Input_Location.Text == "" || Input_Day.Text == "" || Input_Month.Text == "" || Input_Year.Text == "")
             {
-                Lbl_UserInfo.Text = Input_Game.Text + " saved to database!";
+                MessageBox.Show("Invalid statement. Please fill all fields.");
+            }
+            else
+            {
+                DateComplete = Input_Year.Text + "-" + Input_Month.Text + "-" + Input_Day.Text;
+                Gametitle = Input_Game.Text;
+                sGameplay = Convert.ToInt32(Rate_Gameplay.Value);
+                sPresentation = Convert.ToInt32(Rate_Presentation.Value);
+                sNarrative = Convert.ToInt32(Rate_Narrative.Value);
+                sQuality = Convert.ToInt32(Rate_Quality.Value);
+                sSound = Convert.ToInt32(Rate_Sound.Value);
+                sContent = Convert.ToInt32(Rate_Content.Value);
+                sPacing = Convert.ToInt32(Rate_Pacing.Value);
+                sBalance = Convert.ToInt32(Rate_Balance.Value);
+                sImpression = Convert.ToInt32(Rate_Impression.Value);
+                sTotal = sGameplay + sPresentation + sNarrative + sQuality + sSound + sContent + sPacing + sBalance + sImpression + 10;
 
-                if (ReplayStatus == false)
+                if (EditMode == false)
                 {
-                    ConnectDB.Insert("INSERT INTO score_values (name, gameplay, presentation, narrative, quality, sound, content, pacing, balance, impression, total)" +
-                        "VALUES ('" + Gametitle + "'," +
-                                "'" + sGameplay + "'," +
-                                "'" + sPresentation + "'," +
-                                "'" + sNarrative + "'," +
-                                "'" + sQuality + "'," +
-                                "'" + sSound + "'," +
-                                "'" + sContent + "'," +
-                                "'" + sPacing + "'," +
-                                "'" + sBalance + "'," +
-                                "'" + sImpression + "'," +
-                                "'" + sTotal + "')");
-                    ConnectDB.Close();
+                    Lbl_UserInfo.Text = Input_Game.Text + " saved to database!";
 
-                    SQLiteDataReader reader = ConnectDB.Reader("SELECT * FROM score_values WHERE name = '" + Gametitle + "'");
-                    reader.Read();
+                    if (ReplayStatus == false)
+                    {
+                        ConnectDB.Insert("INSERT INTO score_values (name, gameplay, presentation, narrative, quality, sound, content, pacing, balance, impression, total)" +
+                            "VALUES ('" + Gametitle + "'," +
+                                    "'" + sGameplay + "'," +
+                                    "'" + sPresentation + "'," +
+                                    "'" + sNarrative + "'," +
+                                    "'" + sQuality + "'," +
+                                    "'" + sSound + "'," +
+                                    "'" + sContent + "'," +
+                                    "'" + sPacing + "'," +
+                                    "'" + sBalance + "'," +
+                                    "'" + sImpression + "'," +
+                                    "'" + sTotal + "')");
+                        ConnectDB.Close();
 
-                    foreignKeyID = Convert.ToInt32(reader[0]);
-                    MessageBox.Show("KeyID: " + foreignKeyID);
-                    reader.Close();
-                    ConnectDB.Close();
+                        SQLiteDataReader reader = ConnectDB.Reader("SELECT * FROM score_values WHERE name = '" + Gametitle + "'");
+                        reader.Read();
 
-                    ConnectDB.Insert("INSERT INTO games (name, date, location, note, score, replay)" +
-                        "VALUES ('" + Input_Game.Text + "'," +
-                                "'" + DateComplete + "'," +
-                                "'" + Input_Location.Text + "'," +
-                                "'" + Input_Note.Text + "'," +
-                                "'" + foreignKeyID + "'," +
-                                "'" + "0" +
-                        "')"); ;
-                    ConnectDB.Close();
+                        foreignKeyID = Convert.ToInt32(reader[0]);
+                        MessageBox.Show("KeyID: " + foreignKeyID);
+                        reader.Close();
+                        ConnectDB.Close();
+
+                        ConnectDB.Insert("INSERT INTO games (name, date, location, note, score, replay)" +
+                            "VALUES ('" + Input_Game.Text + "'," +
+                                    "'" + DateComplete + "'," +
+                                    "'" + Input_Location.Text + "'," +
+                                    "'" + Input_Note.Text + "'," +
+                                    "'" + foreignKeyID + "'," +
+                                    "'" + "0" +
+                            "')"); ;
+                        ConnectDB.Close();
+                    }
+
+                    if (ReplayStatus == true)
+                    {
+                        SQLiteDataReader reader = ConnectDB.Reader("SELECT * FROM score_values WHERE name = '" + Gametitle + "'");
+                        reader.Read();
+
+                        foreignKeyID = Convert.ToInt32(reader[0]);
+                        MessageBox.Show("KeyID: " + foreignKeyID);
+                        reader.Close();
+                        ConnectDB.Close();
+
+                        ConnectDB.Insert("INSERT INTO games (name, date, location, note, score, replay)" +
+                            "VALUES ('" + Input_Game.Text + "'," +
+                                    "'" + DateComplete + "'," +
+                                    "'" + Input_Location.Text + "'," +
+                                    "'" + Input_Note.Text + "'," +
+                                    "'" + foreignKeyID + "'," +
+                                    "'" + "1" +
+                            "')"); ;
+                        ConnectDB.Close();
+                    }
                 }
 
-                if (ReplayStatus == true)
+                else if (EditMode == true)
                 {
-                    SQLiteDataReader reader = ConnectDB.Reader("SELECT * FROM score_values WHERE name = '" + Gametitle + "'");
-                    reader.Read();
+                    if (ReplayStatus == false)
+                    {
+                        ConnectDB.Update("UPDATE games " +
+                            "SET name = '" + Input_Game.Text + "', " +
+                            "date = '" + Input_Year.Text + "-" + Input_Month.Text + "-" + Input_Day.Text + "', " +
+                            "location = '" + Input_Location.Text + "', " +
+                            "note = '" + Input_Note.Text + "', " +
+                            "score = '" + tmp_foreignKeyID + "', " +
+                            "replay = '" + 0 + "' " +
+                            "WHERE name = '" + CurrentTargetName + "' AND id = '" + CurrentTargetID + "'");
 
-                    foreignKeyID = Convert.ToInt32(reader[0]);
-                    MessageBox.Show("KeyID: " + foreignKeyID);
-                    reader.Close();
-                    ConnectDB.Close();
+                        ConnectDB.Update("UPDATE score_values " +
+                            "SET gameplay = '" + Rate_Gameplay.Value + "', " +
+                            "total = '" + sTotal + "', " +
+                            "name = '" + Input_Game.Text + "', " +
+                            "presentation = '" + Rate_Presentation.Value + "', " +
+                            "narrative = '" + Rate_Narrative.Value + "', " +
+                            "quality = '" + Rate_Quality.Value + "', " +
+                            "sound = '" + Rate_Sound.Value + "', " +
+                            "content = '" + Rate_Content.Value + "', " +
+                            "pacing = '" + Rate_Pacing.Value + "', " +
+                            "balance = '" + Rate_Balance.Value + "', " +
+                            "Impression = '" + Rate_Impression.Value + "' " +
+                            "WHERE s_id = '" + tmp_foreignKeyID + "'");
 
-                    ConnectDB.Insert("INSERT INTO games (name, date, location, note, score, replay)" +
-                        "VALUES ('" + Input_Game.Text + "'," +
-                                "'" + DateComplete + "'," +
-                                "'" + Input_Location.Text + "'," +
-                                "'" + Input_Note.Text + "'," +
-                                "'" + foreignKeyID + "'," +
-                                "'" + "1" +
-                        "')"); ;
-                    ConnectDB.Close();
+                        ConnectDB.Close();
+                        EditMode = false;
+                        Lbl_UserInfo.Text = Input_Game.Text + " succesfully edited!";
+                    }
+                    else if (ReplayStatus == true)
+                    {
+                        ConnectDB.Update("UPDATE games " +
+                            "SET name = '" + Input_Game.Text + "', " +
+                            "date = '" + Input_Year.Text + "-" + Input_Month.Text + "-" + Input_Day.Text + "', " +
+                            "location = '" + Input_Location.Text + "', " +
+                            "note = '" + Input_Note.Text + "', " +
+                            "score = '" + tmp_foreignKeyID + "', " +
+                            "replay = '" + 0 + "' " +
+                            "WHERE name = '" + CurrentTargetName + "' AND id = '" + CurrentTargetID + "'");
+
+                        EditMode = false;
+                        Lbl_UserInfo.Text = Input_Game.Text + " succesfully edited!";
+                    }
                 }
             }
 
-            else if (EditMode == true)
-            {
-                if (ReplayStatus == false)
-                {
-                    ConnectDB.Update("UPDATE games " +
-                        "SET name = '" + Input_Game.Text + "', " +
-                        "date = '" + Input_Year.Text + "-" + Input_Month.Text + "-" + Input_Day.Text + "', " +
-                        "location = '" + Input_Location.Text + "', " +
-                        "note = '" + Input_Note.Text + "', " +
-                        "score = '" + tmp_foreignKeyID + "', " +
-                        "replay = '" + 0 + "' " +
-                        "WHERE name = '" + CurrentTargetName + "' AND id = '" + CurrentTargetID + "'");
 
-                    ConnectDB.Update("UPDATE score_values " +
-                        "SET gameplay = '" + Rate_Gameplay.Value + "', " +
-                        "total = '" + sTotal + "', " +
-                        "name = '" + Input_Game.Text + "', " +
-                        "presentation = '" + Rate_Presentation.Value + "', " +
-                        "narrative = '" + Rate_Narrative.Value + "', " +
-                        "quality = '" + Rate_Quality.Value + "', " +
-                        "sound = '" + Rate_Sound.Value + "', " +
-                        "content = '" + Rate_Content.Value + "', " +
-                        "pacing = '" + Rate_Pacing.Value + "', " +
-                        "balance = '" + Rate_Balance.Value + "', " +
-                        "Impression = '" + Rate_Impression.Value + "' " +
-                        "WHERE s_id = '" + tmp_foreignKeyID + "'");
-
-                    ConnectDB.Close();
-                    EditMode = false;
-                    Lbl_UserInfo.Text = Input_Game.Text + " succesfully edited!";
-                }
-                else if (ReplayStatus == true)
-                {
-                    ConnectDB.Update("UPDATE games " +
-                        "SET name = '" + Input_Game.Text + "', " +
-                        "date = '" + Input_Year.Text + "-" + Input_Month.Text + "-" + Input_Day.Text + "', " +
-                        "location = '" + Input_Location.Text + "', " +
-                        "note = '" + Input_Note.Text + "', " +
-                        "score = '" + tmp_foreignKeyID + "', " +
-                        "replay = '" + 0 + "' " +
-                        "WHERE name = '" + CurrentTargetName + "' AND id = '" + CurrentTargetID + "'");
-
-                    EditMode = false;
-                    Lbl_UserInfo.Text = Input_Game.Text + " succesfully edited!";
-                }
-            }
 
         }
 
